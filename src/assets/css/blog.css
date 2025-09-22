@@ -109,7 +109,7 @@
 @media only screen and (min-width: 0em) {
   .blog-container {
     padding: clamp(60px, 7vw, 100px) 0;
-    padding-top: 6.5rem;
+    padding-top: 8rem;
   }
   .main-content-wrapper {
     display: flex;
@@ -130,7 +130,7 @@
 /* Tablet - 1024px */
 @media only screen and (min-width: 64em) {
   .blog-container {
-    padding-top: clamp(60px, 7vw, 100px);
+    padding-top: clamp(80px, 12vw, 120px);
   }
   .main-content-wrapper {
     flex-direction: row;
