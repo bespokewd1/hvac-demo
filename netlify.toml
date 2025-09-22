@@ -1,0 +1,21 @@
+[build]
+  publish = "public/"
+  command = "npm run build"
+
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
+
+[[plugins]]
+package = "netlify-plugin-cache"
+
+  [plugins.inputs]
+  paths = [
+    "public/assets/images",
+    ".cache"
+  ]
+
+[[redirects]]
+  from = "https://kmsplumbingyeg.com/financing/"
+  to = "https://www.financeit.ca/en/direct/payment-plan/YT0yNjE5MzgmbD0mcD1JMlZlYnJjaDRaRUFvbUd6bkgtUDJnJnM9MCZ2PTE=/apply?slug=WjM1yQ"
+  status = 301
+  force = true

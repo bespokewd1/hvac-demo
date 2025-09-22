@@ -1,0 +1,652 @@
+/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #services-218 {
+    padding: var(--sectionPadding);
+  }
+  #services-218 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-218 .cs-container .cs-bg-image {
+    display: none;
+  }
+  #services-218 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #services-218 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #services-218 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #services-218 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 70px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #services-218 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: var(--secondary);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 70px;
+    transition: width 0.3s;
+  }
+  #services-218 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #services-218 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #services-218 .cs-item {
+    list-style: none;
+    width: 100%;
+    margin-right: 0.625rem;
+    /* padding left and right changes on tablet */
+    padding: 2.75rem 2rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    background-color: #fafbfc;
+    border: 1px solid #dad9e3;
+    border-radius: 0.3125rem;
+    position: relative;
+  }
+  #services-218 .cs-item:before {
+    /* top right box */
+    content: "";
+    width: 45%;
+    max-width: 11.25rem;
+    height: 50%;
+    max-height: 9rem;
+    background: var(--primary);
+    border-radius: 1rem;
+    position: absolute;
+    display: block;
+    top: -0.625rem;
+    right: -0.625rem;
+    z-index: -1;
+  }
+  #services-218 .cs-icon {
+    /* 60px - 77px */
+    width: clamp(3.75rem, 7.6vw, 4.8125rem);
+    height: auto;
+    margin-bottom: 2.5rem;
+    display: block;
+  }
+  #services-218 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 1.5vw, 1.5625rem);
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 1rem;
+    color: var(--headerColor);
+    font-weight: bold;
+  }
+  #services-218 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #services-218 .cs-watermark {
+    display: none;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 48rem) {
+  #services-218 .cs-container {
+    --bg-width: 65%;
+    max-width: 80rem;
+    position: relative;
+  }
+  #services-218 .cs-container:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: var(--bg-width);
+    background: linear-gradient(to right, #ffffff 0%, transparent 35%);
+    pointer-events: none;
+  }
+  #services-218 .cs-container .cs-bg-image {
+    display: block;
+    width: var(--bg-width);
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    z-index: -2;
+  }
+  #services-218 .cs-content {
+    width: 50%;
+    padding-bottom: 1px;
+    backdrop-filter: blur(1px);
+  }
+  #services-218 .cs-card-group {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  #services-218 .cs-item {
+    grid-column: span 4;
+    grid-row: span 1;
+    margin: 0;
+    /* makes each card the same height if you add or remove lines of text */
+    align-self: stretch;
+  }
+  #services-218 .cs-watermark {
+    width: 30%;
+    max-width: 14rem;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+  }
+}
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #pricing-1103-1112 {
+    padding: var(--sectionPadding);
+    background-color: #f7f8f8;
+  }
+  #pricing-1103-1112 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #pricing-1103-1112 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #pricing-1103-1112 .cs-text {
+    max-width: 25.8125rem;
+    margin-bottom: 1rem;
+  }
+  #pricing-1103-1112 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #pricing-1103-1112 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.8vw, 1.25rem);
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #pricing-1103-1112 .cs-item {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* 24px - 40px top & Bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(1.5rem, 3vw, 2.5rem) 1.5rem;
+    background-color: #fff;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #pricing-1103-1112 .cs-package {
+    /* 13px - 16px */
+    font-size: clamp(0.8125rem, 1.4vw, 1rem);
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #767676;
+    display: block;
+  }
+  #pricing-1103-1112 .cs-price {
+    /* 31px - 49px */
+    font-size: var(--headerFontSize);
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 900;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #pricing-1103-1112 .cs-ul {
+    /* 20px - 25px */
+    margin: clamp(1.25rem, 3vw, 1.5rem) 0 0 0;
+    padding: clamp(1.25rem, 3vw, 1.5rem) 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    position: relative;
+  }
+  #pricing-1103-1112 .cs-ul:before {
+    /* divider Line */
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(232, 232, 232, 0.2) 0%, #e8e8e8 53.78%, rgba(232, 232, 232, 0.2) 100%);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  #pricing-1103-1112 .cs-li {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    list-style: none;
+    line-height: 1.2em;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: space-between;
+    /* push everything to the top so if the li goes to two lines the icon stays at the top */
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #pricing-1103-1112 .cs-li.cs-disabled {
+    opacity: 0.5;
+  }
+  #pricing-1103-1112 .cs-li.cs-disabled .cs-icon {
+    filter: grayscale(1) brightness(300%);
+  }
+  #pricing-1103-1112 .cs-icon {
+    width: 1.125rem;
+    height: auto;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing-1103-1112 .cs-card-group {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #pricing-1103-1112 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #pricing-1103-1112 .cs-title {
+    max-width: 14ch;
+  }
+  #pricing-1103-1112 .cs-card-group {
+    width: 62%;
+    max-width: 52.9375rem;
+  }
+}
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #gallery-378 {
+    padding: var(--sectionPadding);
+  }
+  #gallery-378 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #gallery-378 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #gallery-378 .cs-gallery {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  #gallery-378 .cs-image {
+    border-radius: 1.25rem;
+    width: 46%;
+    /* 150px - 300px */
+    height: clamp(9.375rem, 39vw, 18.75rem);
+    max-width: 21.875rem;
+    /* clips the image corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #gallery-378 .cs-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes it act like a background image */
+    object-fit: cover;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #gallery-378 .cs-image {
+    width: 23.8%;
+    /* 300px - 400px */
+    height: clamp(18.75rem, 30vw, 25rem);
+    aspect-ratio: 1;
+  }
+}
+/*-- -------------------------- -->
+<---          Coupon Modal         -->
+<--- -------------------------- -*/
+.coupon-modal {
+  /* display: none;  No longer needed, dialog is hidden by default */
+  position: fixed;
+  /* Stay in place -  While `<dialog>` is technically top layer, fixed positioning can be useful for consistent layout */
+  z-index: 1000;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: transparent;
+  /* Remove background from .coupon-modal, backdrop handles it now */
+  border: none;
+  /* Remove default dialog border */
+  padding: 0;
+  /* Remove default dialog padding */
+  margin: 0;
+  /* Ensure no margin */
+  display: grid;
+  place-content: center;
+}
+.coupon-modal:before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1px);
+}
+/* Style the backdrop - the overlay behind the dialog */
+.coupon-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  /* backdrop-filter: blur(5px);  You can add blur or other effects if desired */
+}
+.coupon-modal-content {
+  background-color: #fefefe;
+  /* margin: 15% auto;  We are centering using flexbox on .coupon-modal now */
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 90%;
+  /* Could be more or less, depending on screen size */
+  max-width: 31.25rem;
+  margin: 2rem auto 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* Optional: Add shadow for depth */
+}
+.coupon-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.coupon-modal-header .cs-title {
+  margin: 0;
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 0;
+  color: var(--primary);
+}
+.coupon-modal-close-button {
+  color: #aaa;
+  /* float: right; Not needed with flexbox in header */
+  font-size: 28px;
+  font-weight: bold;
+  background: none;
+  /* Remove default button background */
+  border: none;
+  /* Remove default button border */
+  cursor: pointer;
+  /* Indicate it's clickable */
+  padding: 0;
+  /* Reset padding */
+  appearance: none;
+  /* For better cross-browser button styling */
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.coupon-modal-close-button:hover,
+.coupon-modal-close-button:focus {
+  color: black;
+  text-decoration: none;
+}
+.coupon-modal-body {
+  padding: 20px 0;
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 0rem) {
+  #couponModal .coupon-modal-body > div {
+    padding: 0;
+  }
+  #couponModal .coupon-modal-body > div .coupon-header {
+    /* 20px - 25px */
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    font-weight: 600;
+    text-align: center;
+  }
+  #couponModal .coupon-modal-body > div .coupon-body {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    text-align: center;
+  }
+  #couponModal .coupon-modal-body > div .coupon-body > :nth-child(3) {
+    color: var(--bodyTextColor);
+  }
+  #couponModal .coupon-modal-body > div .coupon-footer {
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  #couponModal .coupon-modal-body > div .coupon-footer .qr-code {
+    place-self: center;
+  }
+  #couponModal .coupon-modal-body > div .coupon-footer .qr-code img {
+    width: clamp(9.375rem, 5vw, 12.5rem);
+    height: auto;
+  }
+  #couponModal .coupon-modal-body > div .coupon-footer .buttons {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
+  }
+  #couponModal .coupon-modal-body > div .coupon-footer .buttons .save-btn {
+    background-color: var(--secondary);
+  }
+  #couponModal .coupon-modal-body > div .coupon-footer .buttons .print-btn {
+    background-color: var(--primary);
+  }
+  #couponModal .coupon-modal-body > div .coupon-footer .buttons .save-btn,
+  #couponModal .coupon-modal-body > div .coupon-footer .buttons .print-btn {
+    color: var(--bodyTextColorWhite);
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 70px;
+    cursor: pointer;
+    margin-right: 0.3125rem;
+  }
+}
+@media only screen and (min-width: 1130px) {
+  .coupon-modal-content {
+    max-width: 40.625rem;
+    margin: 2.5rem auto 0;
+  }
+}
+/*-- -------------------------- -->
+<---  Auto Scroll Brands Images -->
+<--- -------------------------- -*/
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - (var(--scroller-gap) / 2)));
+  }
+}
+/* mobile*/
+#autoscroll-gallery {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Using clamp to create fluid values based on viewport width */
+  --scroller-gap: clamp(1.5rem, calc(1rem + 2vw), 4rem);
+  --scroller-max-width: clamp(300px, calc(300px + 30vw), 1200px);
+  /*animation starts here */
+}
+#autoscroll-gallery .cs-content {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#autoscroll-gallery .gallery-wrapper li {
+  list-style: none;
+  transition: transform 200ms ease-in-out, filter 200ms linear;
+  touch-action: pan-y;
+}
+#autoscroll-gallery .gallery-wrapper li:hover {
+  transform: translateY(-10%);
+  filter: grayscale(0);
+}
+#autoscroll-gallery .gallery-wrapper li img {
+  object-fit: contain;
+  width: clamp(150px, calc(150px + 5vw), 250px);
+  /* Fluid image width */
+  height: auto;
+}
+#autoscroll-gallery .scroller .scroller-inner {
+  display: flex;
+  padding-block: 1rem;
+  padding-inline: 0;
+  gap: var(--scroller-gap);
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#autoscroll-gallery [data-animated="true"] {
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+#autoscroll-gallery [data-animated="true"] .scroller-inner {
+  flex-wrap: nowrap;
+  animation: scroll var(--animation-duration, 20s) var(--animation-direction, forwards) linear infinite;
+  width: fit-content;
+}
+#autoscroll-gallery [data-animated="true"] .scroller-inner:hover {
+  animation-play-state: paused;
+  filter: grayscale(0.4);
+}
+#autoscroll-gallery .scroller[data-direction="right"] {
+  --animation-direction: reverse;
+}
+#autoscroll-gallery .scroller[data-direction="left"] {
+  --animation-direction: reverse;
+}
+@media screen and (max-width: 425px) {
+  #autoscroll-gallery .scroller {
+    max-width: 20rem;
+  }
+}
+@media screen and (min-width: 426px) {
+  #autoscroll-gallery .scroller {
+    max-width: var(--scroller-max-width);
+  }
+}

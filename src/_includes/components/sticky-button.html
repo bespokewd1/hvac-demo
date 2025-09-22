@@ -1,0 +1,87 @@
+<div class="sticky-div">
+  <a href="tel:{{ client.phoneForTel }}" class="cs-button-solid sticky-button"
+    >Call Today - {{ client.phoneFormatted }}
+  </a>
+</div>
+
+<style>
+  .sticky-div {
+    position: fixed;
+    bottom: 8px;
+    width: 100%;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(50%);
+    z-index: 100;
+    transition:
+      transform 200ms ease-in,
+      visibility 200ms ease-in,
+      opacity 200ms ease-in;
+  }
+  .cs-button-solid.sticky-button {
+    margin: auto;
+    border-radius: 70px;
+    background-color: var(--secondary);
+  }
+
+  body.show-btn .sticky-div {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mainElement = document.getElementById("main");
+    let firstChildOfMain = null;
+
+    if (mainElement) {
+      const hero = document.getElementById("hero-227");
+      firstChildOfMain = hero ? hero : mainElement.firstElementChild;
+    } else {
+      console.warn(
+        'No <main id="main"> element found. Sticky button will always be visible.',
+      );
+      return;
+    }
+
+    if (!firstChildOfMain) {
+      console.warn(
+        '<main id="main"> has no first child. Sticky button will always be visible.',
+      );
+      return;
+    }
+
+    const body = document.body;
+    let ticking = false; // for throttling
+
+    function checkFirstChildVisibility() {
+      if (!firstChildOfMain) return; // Exit if firstChildOfMain is null (already handled in DOMContentLoaded, but for safety)
+
+      const rect = firstChildOfMain.getBoundingClientRect();
+      // Check if the bottom of the first child is above the viewport
+      if (rect.bottom <= 0) {
+        body.classList.add("show-btn");
+      } else {
+        body.classList.remove("show-btn");
+      }
+    }
+
+    function handleScroll() {
+      if (!ticking) {
+        requestAnimationFrame(function () {
+          checkFirstChildVisibility();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    // Initial check in case the page loads already scrolled past the first child
+    checkFirstChildVisibility();
+
+    window.addEventListener("scroll", handleScroll);
+  });
+</script>

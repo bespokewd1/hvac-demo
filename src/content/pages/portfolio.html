@@ -1,0 +1,400 @@
+---
+title: "Portfolio | KMS Plumbing & Gasfitting Ltd."
+description: "KMS Plumbing & Gasfitting Ltd. – Providing efficient, reliable plumbing, heating, and gas services with 15+ years of experience. Trusted solutions for homes and businesses in Edmonton."
+permalink: 'portfolio/'
+eleventyNavigation:
+    key: 'Portfolio'
+    order: '400'
+---
+
+
+{% block head %}
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
+        <meta property="og:image" content="{{ client.domain }}/assets/images/og_image.jpg">
+<link rel="stylesheet" href="{{ client.domain }}/assets/css/portfolio.css">
+
+<!--          Blaze Assets        -->
+<link rel="stylesheet" href="{{ client.domain }}/assets/css/blaze.css">
+<script src="{{ client.domain }}/assets/js/blaze-slider.dev.js"></script>
+{% endblock %}
+
+{% extends 'layouts/base.html' %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1106-1112">
+    <div class="cs-container">
+        <span class="cs-int-title">Portfolio</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/portfolio/" class="cs-link cs-active">Portfolio</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner_image.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banner_image.jpg">
+        <img decoding="async" src="/assets/images/banner_image.jpg" alt="mechanic" width="1280" height="568"
+            aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">SAVE $75 on any plumbing service!</h2>
+            <a href="/coupons/" target="_blank" class="cs-button-solid" style="white-space: nowrap;">Get Coupons now!</a>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-378">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Portfolio</span>
+            <h2 class="cs-title">Showcasing Our Expertise in Plumbing & Gasfitting</h2>
+            <p class="cs-text">
+                At KMS Plumbing & Gasfitting, we take pride in delivering reliable solutions for residential properties. Explore some of our past projects that highlight our commitment to quality
+                workmanship, attention to detail, and customer satisfaction. Let us handle your plumbing and gasfitting
+                needs so you can focus on what matters most.
+            </p>
+        </div>
+        <div class="cs-gallery">
+            <!--Picture 1-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-1.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-1.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-1.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-2.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-2.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-2.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-3.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-3.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-3.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-4.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-4.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-4.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-5.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-5.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-5.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-6.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-6.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-6.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 7-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-7.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-7.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-7.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 8-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-8.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-8.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-8.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+
+
+            <!--Picture 9-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-9.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-9.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-9.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 10-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-10.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-10.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-10.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 11-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-11.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-11.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-11.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 12-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-12.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-12.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-12.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 13-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-13.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-13.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-13.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 14-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/portfolio-14.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/portfolio-14.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/portfolio-14.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 15-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/gallery/gallery4.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/gallery/gallery4.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/gallery/gallery4.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+            <!--Picture 16-->
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/gallery/gallery3.jpg">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/gallery/gallery3.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/gallery/gallery3.jpg" alt="gallery" width="305"
+                    height="400">
+            </picture>
+        </div>
+        <a href="https://www.instagram.com/kmsplumbingandgasfitting/" target="_blank" class="cs-button-solid">Check Out More Photos</a>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   CTA                        -->
+<!-- ============================================ -->
+
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Book Now, Pay Later. Flexible financing options available
+            </h2>
+            <a href="https://www.financeit.ca/en/direct/payment-plan/YT0yNjE5MzgmbD0mcD1JMlZlYnJjaDRaRUFvbUd6bkgtUDJnJnM9MCZ2PTE=/apply?slug=WjM1yQ" target="_blank" class="cs-button-solid">Learn More</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ============================================ -->
+<!--                   KMS Badges                 -->
+<!-- ============================================ -->
+
+<section id="gallery-45">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Experience the KMS Difference</span>
+            <h2 class="cs-h3">Association & Memberships</h2>
+        </div>
+        <div class="trust-signals">
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/red-seal-certified.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/red-seal-certified.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/red-seal-certified.png" alt="red-seal-certified"
+                         height="79">
+                </picture>
+                <p class="cs-text">Red Seal Certified Plumber & Gasfitter</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/fully-insured.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/fully-insured.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/fully-insured.png" alt="fully-insured"
+                         height="79">
+                </picture>
+                <p class="cs-text">Fully Insured</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/service-warranty.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/service-warranty.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/service-warranty.png" alt="service-warranty"
+                         height="79">
+                </picture>
+                <p class="cs-text">1 Year Service Warranty</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/edmonton-chamber-logo.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/edmonton-chamber-logo.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/edmonton-chamber-logo.png" alt="edmonton-chamber-logo"
+                         height="79">
+                </picture>
+                <p class="cs-text">Edmonton Chamber of Commerce Certification</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/mcaa-logo.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/mcaa-logo.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/mcaa-logo.png" alt="mcaa-logo"
+                         height="79">
+                </picture>
+                <p class="cs-text">Mechanical Contractors Association of Alberta</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Ronald Sponsorship            -->
+<!-- ============================================ -->
+
+{% include "components/ronald-sponsorship.html" %}
+
+
+<section id="reviews-1833">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Our Client Testimonials</h2>
+        </div>
+        <div class="blaze-slider">
+            <div class="blaze-container">
+                <div class="blaze-track-container">
+                    <div class="blaze-track">
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img class="cs-stars" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                    <p class="cs-review-text">
+                                        ”We worked with Jack at KMS when we had our basement contracted. He did all the
+                                        plumbing for our basement bathroom. He provides high quality work and very
+                                        pleasant to work with. When we had an issue, he came out same day and kept in
+                                        contact with me to ensure it got completed. He even followed up to ensure all
+                                        was working well. I would hire again.”
+                                    </p>
+                                    <span class="cs-name">Miles McMillan</span>
+                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
+                                    <!--Quote-->
+                                    <img class="cs-quote" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img class="cs-stars" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                    <p class="cs-review-text">
+                                        ”Jack installed a new faucet and some upgraded sink components for us; the
+                                        service and workmanship were fantastic. He was very thorough in assessing our
+                                        needs/expectations prior to the job; the customer service was excellent
+                                        throughout our experience. I highly recommend KMS Plumbing.”
+                                    </p>
+                                    <span class="cs-name">Dave O.</span>
+                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
+                                    <!--Quote-->
+                                    <img class="cs-quote" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img class="cs-stars" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                    <p class="cs-review-text">
+                                        ”I just had my hot water tank replacement completed by Jack Kumar of KMS
+                                        Plumbing & Gas fitting. Prior to this job, Jack had replaced a toilet for us and
+                                        completed a hot water tank replacement for a senior friend of ours. As usual,
+                                        Jack is on time and professional. His workmanship is great. Housekeeping is
+                                        excellent. Pricing is reasonable. Thanks for your service Jack.”
+                                    </p>
+                                    <span class="cs-name">Alex Chan</span>
+                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
+                                    <!--Quote-->
+                                    <img class="cs-quote" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blaze-nav">
+                    <div class="blaze-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!--Slider Initialization Script-->
+        <script>
+            const el = document.querySelector('.blaze-slider')
+            new BlazeSlider(el)
+        </script>
+        <a href="{{ client.google_review }}" class="cs-button-solid" target="_blank">See More Reviews</a>
+    </div>
+    <!--Texture Graphic-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 1023px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 1024px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png">
+        <img loading="lazy" decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png" alt="dotted texture"
+            width="1920" height="600">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--              Secondary Banner                -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Free Estimates & No Trip Charges</h2>
+            <a href="tel:5873404059" class="cs-button-solid">Call Now!</a>
+        </div>
+    </div>
+</section>
+
+
+{% include "components/cta.html" %}
+
+{% endblock %}

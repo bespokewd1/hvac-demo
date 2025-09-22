@@ -1,0 +1,30 @@
+{% macro renderCoupons(coupons) %}
+<div class="coupons-grid">
+  {% for coupon in coupons %}
+  <div class="coupon">
+    <div class="coupon-header">{{ coupon.title }}</div>
+    <div class="coupon-body">
+      <p><strong>{{ coupon.discount }}</strong></p>
+      <p>Expires on {{ coupon.expiryDate }}</p>
+      <p>{{ coupon.description }}</p>
+    </div>
+    <div class="coupon-footer">
+      <div class="qr-code">
+        <img
+          loading="lazy"
+          decoding="async"
+          data-src="{{ coupon.qrCodeSrc }}"
+          alt="QR Code for {{ coupon.title }}"
+          width="120"
+          height="120"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn save-btn">Save to Device</button>
+        <button class="btn print-btn">Print Coupon</button>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}

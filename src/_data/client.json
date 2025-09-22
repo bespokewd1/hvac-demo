@@ -1,0 +1,24 @@
+{
+    "name": "KMS Plumbing & Gasfitting",
+    "email": "info@kmsplumbingyeg.com",
+    "phoneForTel": "+15873404059",
+    "phoneFormatted": "(587) 340-4059",
+    "address": {
+        "lineOne": "Edmonton, Alberta CA",
+        "lineTwo": "",
+        "city": "Edmonton",
+        "state": "Alberta",
+        "zip": "80206",
+        "mapLink": "https://maps.app.goo.gl/mKYSp8JUZ5tuAo6v5",
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57654.15207658058!2d-113.53793907527638!3d53.54030513153948!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0224580deff23%3A0x411fa00c4af6155d!2sEdmonton%2C%20AB%2C%20Canada!5e1!3m2!1sen!2sph!4v1740366546323!5m2!1sen!2sph"
+    },
+    "social": {
+        "facebook": "https://www.facebook.com/KMsSPlumbingyeg/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/kmsplumbingandgasfitting/",
+        "youtube": "https://www.youtube.com/"
+    },
+    "domain": "https://kms-draft.netlify.app",
+    "logo_url": "/assets/images/main_logo.png",
+    "google_review": "https://www.google.com/search?hl=en-PH&gl=ph&q=KMS+Plumbing+%26+Gasfitting&ludocid=11240253190258795075&lsig=AB86z5U2-QCyOc8rECFsZoBqDgB_#lrd=0x53a03db06a8cbb61:0x9bfd66b91ed3a243,1,,,,"
+}

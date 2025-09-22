@@ -1,0 +1,350 @@
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-523 {
+    padding: var(--sectionPadding);
+
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-0.6em);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatAnimation2 {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-1em);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at desktop */
+      max-width: (550/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+    }
+
+    .cs-color {
+      color: var(--secondary);
+    }
+
+    .cs-text {
+      margin-bottom: (16/16rem);
+      &:last-of-type {
+        margin-bottom: (32/16rem);
+      }
+    }
+
+    .cs-image-group {
+      /* this is how we can scale entire groups using ems.  Font size is tied to the view width, so as the screen gets bigger, so does the font size, and this scales up and down the elements with em values.  Then it stops growing once the font size reaches the defined value of 1em (16px which is default on the html element). Font size changes at desktop */
+      font-size: ~"min(2.3vw, .875em)";
+      /* all values are done in ems, not rems, so we can scale the group with a font size min/max equation */
+      width: (630/16em);
+      height: (817/16em);
+      /* pushes it to the top in the first position */
+      order: -1;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: (186/16em);
+        height: (161/16em);
+        background: var(--primary);
+        opacity: 1;
+        display: block;
+        position: absolute;
+        top: (48/16em);
+        left: (40/16em);
+        animation-name: floatAnimation;
+        animation-duration: 6s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    .cs-picture {
+      display: block;
+      position: absolute;
+
+      img {
+        width: 100%;
+        height: 100%;
+        /* makes it act like a background image */
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .cs-picture-large {
+      width: (476/16em);
+      height: (677/16em);
+      top: (70/16em);
+      left: (62/16em);
+    }
+
+    .cs-picture-small {
+      width: (260/16em);
+      height: (225/16em);
+      background-color: #fff;
+      border: (10/16em) solid #fff;
+      right: 0;
+      bottom: 0;
+      animation-name: floatAnimation2;
+      animation-duration: 20s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbs-523 {
+    .cs-container {
+      max-width: (1280/16rem);
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .cs-content {
+      width: 51%;
+      max-width: (550/16rem);
+    }
+
+    .cs-image-group {
+      font-size: ~"min(1.1vw, 1em)";
+    }
+  }
+}
+
+/*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #steps-1172 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at desktop */
+      max-width: (704/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+    }
+
+    .cs-text {
+      font-size: var(--bodyFontSize);
+      line-height: 1.5em;
+      text-align: inherit;
+      width: 100%;
+      max-width: (650/16rem);
+      margin: 0;
+      color: var(--bodyTextColor);
+    }
+
+    .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: (20/16rem);
+
+      .cs-picture {
+        width: (88/16rem);
+        height: (88/16rem);
+        margin-bottom: (24/16rem);
+        border: 1px solid #858585;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .cs-item {
+      text-align: center;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-column: span 12;
+      position: relative;
+
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+
+      &:nth-of-type(even) {
+        &:after {
+          /* scaleX -1 flips it horizontally */
+          transform: rotate(-135deg) scaleX(-1);
+        }
+      }
+
+      &:after {
+        content: "";
+        /* 54px - 84px */
+        width: clamp(3.375rem, 6vw, 5.25rem);
+        height: clamp(3.375rem, 6vw, 5.25rem);
+        margin-top: (20/16rem);
+        background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/curved-arrow-light.svg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 1;
+        display: block;
+        position: relative;
+        transform: rotate(135deg);
+      }
+    }
+
+    .finance-banner.cs-picture {
+      border: none;
+    }
+
+    .cs-icon {
+      width: (40/16rem);
+      height: auto;
+      display: block;
+    }
+
+    .cs-h3 {
+      font-size: (20/16rem);
+      line-height: 1.2em;
+      text-align: inherit;
+      margin: 0 0 (12/16rem) 0;
+      color: var(--headerColor);
+    }
+
+    .cs-item-text {
+      font-size: (16/16rem);
+      line-height: 1.5em;
+      text-align: inherit;
+      max-width: (342/16rem);
+      margin: 0;
+      color: var(--bodyTextColor);
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #steps-1172 {
+    .cs-container {
+      /* 16px - 24px left & right */
+      padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 1.3vw, 1.5rem);
+    }
+    .cs-item {
+      grid-column: span 4;
+
+      &:nth-of-type(2) {
+        &:after {
+          display: none;
+        }
+      }
+
+      &:nth-of-type(1) {
+        &:after {
+          transform: rotate(135deg) scaleX(-1);
+        }
+      }
+
+      &:after {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: (-40/16rem);
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #steps-1172 {
+    .cs-container {
+      max-width: (1280/16rem);
+    }
+
+    .cs-item {
+      grid-column: span 4;
+
+      &:nth-of-type(2) {
+        &:after {
+          display: block;
+          transform: rotate(45deg);
+        }
+      }
+
+      &:after {
+        right: (-48/16rem);
+      }
+    }
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      flex-direction: row;
+      justify-content: space-between;
+      /* centers content horizontally, set to flex-start to left align */
+
+      .content-left {
+        text-align: left;
+      }
+    }
+  }
+}

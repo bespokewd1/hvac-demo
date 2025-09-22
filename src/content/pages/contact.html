@@ -1,0 +1,260 @@
+---
+title: "Contact | KMS Plumbing & Gasfitting Ltd."
+description: "Contact KMS Plumbing & Gasfitting Ltd. for expert plumbing solutions. Whether it's installations, repairs, or maintenance, our team is ready to assist. Get in touch today!"
+permalink: 'contact/'
+eleventyNavigation:
+    key: 'Contact'
+    order: '700'
+---
+
+{% block head %}
+
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
+        <meta property="og:image" content="{{ client.domain }}/assets/images/og_image.jpg">
+
+<link rel="stylesheet" href="/assets/css/contact.css">
+
+<!--          Blaze Assets        -->
+<link rel="stylesheet" href="/assets/css/blaze.css">
+<script src="/assets/js/blaze-slider.dev.js"></script>
+{% endblock %}
+
+{% extends 'layouts/base.html' %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1106-1112">
+    <div class="cs-container">
+        <span class="cs-int-title">Contact Us</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/contact/" class="cs-link cs-active">Contact</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner_image.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banner_image.jpg">
+        <img decoding="async" src="/assets/images/banner_image.jpg" alt="mechanic" width="1280" height="568"
+            aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">SAVE $75 on any plumbing service!</h2>
+            <a href="/coupons/" target="_blank" class="cs-button-solid" style="white-space: nowrap;">Get Coupons now!</a>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1403">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Plumbing Experts You Can Trust!</h2>
+            <p class="cs-text">
+                Need help with plumbing or gasfitting? Our Edmonton team is ready with expert advice, fast service, and
+                free consultations. Call us today!
+            </p>
+            <strong>HOURS OF OPERATION</strong>
+            <br>
+            <p class="cs-text">
+                Monday – Friday: 7 AM – 5 PM<br>
+                Saturday – Sunday: Closed
+            </p>
+
+            <ul class="cs-ul">  
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-76.svg"
+                            alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Phone</span>
+                        <a href="tel:{{ client.phoneForTel }}
+                        " class="cs-link">{{ client.phoneFormatted }}
+                        </a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-76.svg"
+                            alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Email</span>
+                        <a href="mailto:{{ client.email }}" class="cs-link">{{ client.email }}</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-76.svg"
+                            alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Address</span>
+                        <a href="{{ client.address.mapLink }}" class="cs-link" target="_blank">{{ client.address.lineOne
+                            }} {{ client.address.lineTwo }}</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=25366455&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0"></iframe><script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
+
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--          Google Map Iframe Embed             -->
+<!-- ============================================ -->
+
+<section id="map-1403">
+    <!--Replace this embed code with the google maps embed code of your clients location. To do so, google your clients business, click on the map picture that in the profile card to go to the map location. That will take you to Google maps, then find the share button in the left panel and click on it. You will be given a link to share and a button to copy link, ignore that! AAbove that is a tab that says "Embed a map", click that instead and it will bring up the embed code for you clients location in maps.  Click the button to copy the html and paste it in place of this entire iframe tag. Do not keep the original iframe. Replace it with the new one you got from google maps, unless you want to display a map of Wyoming, then you can keep this iframe. -->
+    <iframe src="{{ client.address.mapEmbed }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-1833">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Our Client Testimonials</h2>
+        </div>
+        <div class="blaze-slider">
+            <div class="blaze-container">
+                <div class="blaze-track-container">
+                    <div class="blaze-track">
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img class="cs-stars" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                    <p class="cs-review-text">
+                                        ”We worked with Jack at KMS when we had our basement contracted. He did all the
+                                        plumbing for our basement bathroom. He provides high quality work and very
+                                        pleasant to work with. When we had an issue, he came out same day and kept in
+                                        contact with me to ensure it got completed. He even followed up to ensure all
+                                        was working well. I would hire again.”
+                                    </p>
+                                    <span class="cs-name">Miles McMillan</span>
+                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
+                                    <!--Quote-->
+                                    <img class="cs-quote" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img class="cs-stars" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                    <p class="cs-review-text">
+                                        ”Jack installed a new faucet and some upgraded sink components for us; the
+                                        service and workmanship were fantastic. He was very thorough in assessing our
+                                        needs/expectations prior to the job; the customer service was excellent
+                                        throughout our experience. I highly recommend KMS Plumbing.”
+                                    </p>
+                                    <span class="cs-name">Dave O.</span>
+                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
+                                    <!--Quote-->
+                                    <img class="cs-quote" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img class="cs-stars" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                    <p class="cs-review-text">
+                                        ”I just had my hot water tank replacement completed by Jack Kumar of KMS
+                                        Plumbing & Gas fitting. Prior to this job, Jack had replaced a toilet for us and
+                                        completed a hot water tank replacement for a senior friend of ours. As usual,
+                                        Jack is on time and professional. His workmanship is great. Housekeeping is
+                                        excellent. Pricing is reasonable. Thanks for your service Jack.”
+                                    </p>
+                                    <span class="cs-name">Alex Chan</span>
+                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
+                                    <!--Quote-->
+                                    <img class="cs-quote" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blaze-nav">
+                    <div class="blaze-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!--Slider Initialization Script-->
+        <script>
+            const el = document.querySelector('.blaze-slider')
+            new BlazeSlider(el)
+        </script>
+        <a href="{{ client.google_review }}" class="cs-button-solid" target="_blank">See More Reviews</a>
+    </div>
+    <!--Texture Graphic-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 1023px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 1024px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png">
+        <img loading="lazy" decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png" alt="dotted texture"
+            width="1920" height="600">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--              Secondary Banner                -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Free Estimates & No Trip Charges. Financing Available!</h2>
+            <a href="{{ client.domain }}/contact/" class="cs-button-solid">Contact Us Now!</a>
+        </div>
+    </div>
+</section>
+
+
+
+{% include "components/cta.html" %}
+
+
+{% endblock %}

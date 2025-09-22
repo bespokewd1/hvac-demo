@@ -1,0 +1,156 @@
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+  <div class="cs-container">
+    <!--Nav Logo-->
+    <a href="/" class="cs-logo" aria-label="back to home">
+      <img
+        src="{{ client.logo_url }}"
+        width="60"
+        height="60"
+        aria-hidden="true"
+        decoding="async"
+      />
+    </a>
+    <!--Navigation List-->
+    <nav class="cs-nav" role="navigation">
+      <!--Mobile Nav Toggle-->
+      <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          {% set navPages = collections.all | eleventyNavigation %} {# Loop
+          through all pages with a eleventyNavigation in the frontmatter #} {%
+          for entry in navPages %} {# Define a hasChild variable to make it
+          easier to test what links are dropdowns#} {% set hasChild =
+          entry.children.length %} {# If this page is a dropdown, give it the
+          appropriate classes, icons and accessibility attributes#}
+          <li
+            class="cs-li {% if hasChild %} cs-dropdown {% endif %}"
+            {%
+            if
+            hasChild
+            %}
+            tabindex="0"
+            {%
+            endif
+            %}
+          >
+            {# Similarly, if the link is active, apply the necessary classes #}
+            <a
+              href="{% if entry.key == 'Services' %}javascript:void(0);{% else %}{{ entry.url }}{% endif %}"
+              class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}"
+            >
+              {% if entry.key == 'Services' %}
+              <span class="services-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-wrench"
+                >
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                  />
+                </svg>
+              </span>
+              {% endif %} {% if entry.key == 'Coupons' %}
+              <span class="coupon-icon">
+                <svg
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="30"
+                  height="30"
+                  x="0px"
+                  y="0px"
+                  stroke="currentColor"
+                  fill="currentColor"
+                  viewBox="0 0 512 512"
+                  style="enable-background: new 0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M381.3,73.3C332.1,74.6,294,88,256.9,100.9c-39.7,13.8-77.2,26.8-129.1,27.3c-34.7,0.5-69.4-5.4-103.6-17.3L0,102.5v312.4
+		l12.2,4.3c31.8,11.3,64.3,17.7,96.7,19.3c5.1,0.2,10.2,0.4,15.1,0.4c55.1,0,97.3-14.6,138.2-28.8c43.1-14.9,83.8-29,139.3-26.4
+		c28.8,1.4,57.8,7.2,86.2,17.3l24.4,8.6V97.1l-12-4.4c-31.5-11.4-64.1-17.9-96.9-19.3C395.6,73.1,388.3,73.1,381.3,73.3z
+		 M382.3,109.6c6.2-0.2,12.6-0.2,19.2,0.1c6.8,0.3,13.7,0.9,20.5,1.7c4.9,20,22.8,34.9,44.3,34.9c3.1,0,6.2-0.3,9.1-0.9v166.4
+		c-3-0.6-6-0.9-9.1-0.9c-22.6,0-41.2,16.4-44.9,38c-6.1-0.6-12.2-1.1-18.2-1.4c-62.4-2.7-108.5,13-153,28.4
+		c-43.2,15-84.1,29.1-139.5,26.5c-6.9-0.3-13.8-1-20.6-1.8c-4.9-19.9-22.8-34.8-44.3-34.8c-3.1,0-6.2,0.3-9.1,0.9V200.2
+		c3,0.6,6,0.9,9.1,0.9c22.8,0,41.5-16.7,45-38.4c12.5,1.3,25.1,2.1,37.5,1.9c57.9-0.6,100-15.2,140.7-29.4
+		C304.8,122.7,338.9,110.9,382.3,109.6z M256,164.5c-40.3,0-73.1,41-73.1,91.4s32.8,91.4,73.1,91.4s73.1-41,73.1-91.4
+		S296.3,164.5,256,164.5z M256,201.1c19.8,0,36.6,25.1,36.6,54.9s-16.8,54.9-36.6,54.9s-36.6-25.1-36.6-54.9S236.2,201.1,256,201.1z
+		 M393.1,201.1c-15.2,0-27.4,12.3-27.4,27.4c0,15.2,12.3,27.4,27.4,27.4s27.4-12.3,27.4-27.4C420.6,213.4,408.3,201.1,393.1,201.1z
+		 M118.9,256c-15.2,0-27.4,12.3-27.4,27.4c0,15.2,12.3,27.4,27.4,27.4s27.4-12.3,27.4-27.4C146.3,268.2,134,256,118.9,256z"
+                    />
+                  </g>
+                </svg>
+              </span>
+              {% endif %} {{ entry.key }} {% if hasChild %}
+              <img
+                class="cs-drop-icon"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                alt="dropdown icon"
+                width="15"
+                height="15"
+                decoding="async"
+                aria-hidden="true"
+              />
+              {% endif %}
+            </a>
+
+            {# Dropdowns have another ul/li set up within the parent li. Render
+            in the same way as a normal link #} {% if hasChild %}
+            <ul class="cs-drop-ul">
+              {% for child in entry.children %}
+              <li class="cs-drop-li">
+                <a href="{{ child.url }}" class="cs-li-link cs-drop-link"
+                  >{{ child.key }}</a
+                >
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+    <!-- href="https://app.acuityscheduling.com/schedule.php?owner=25366455&ref=booking_bar" -->
+    <a
+      class="acuity-embed-button cs-button-solid cs-nav-button"
+      href="https://app.acuityscheduling.com/schedule.php?owner=25366455&ref=booking_bar"
+      target="_blank"
+    >
+      <img
+        class="cs-img"
+        decoding="async"
+        src="{{ client.domain }}/assets/images/calendar.svg"
+        alt="play icon"
+        width="17"
+        height="17"
+        aria-hidden="true"
+      />
+      Book Online
+    </a>
+  </div>
+  <script
+    src="https://embed.acuityscheduling.com/embed/bar/25366455.js"
+    async
+  ></script>
+</header>

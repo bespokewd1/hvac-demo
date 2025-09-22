@@ -1,0 +1,375 @@
+---
+title: "About | KMS Plumbing & Gasfitting Ltd."
+description: "KMS Plumbing & Gasfitting Ltd. – Providing efficient, reliable plumbing, heating, and gas services with 15+ years of experience. Trusted solutions for homes and businesses in Edmonton."
+permalink: 'about/'
+eleventyNavigation:
+    key: 'About'
+    order: '200'
+---
+
+{% block head %}
+
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
+        <meta property="og:image" content="{{ client.domain }}/assets/images/og_image.jpg">
+
+<link rel="stylesheet" href="{{ client.domain }}/assets/css/about.css">
+
+<!--          Blaze Assets        -->
+<link rel="stylesheet" href="{{ client.domain }}/assets/css/blaze.css">
+<script src="{{ client.domain }}/assets/js/blaze-slider.dev.js"></script>
+
+{% endblock %}
+
+{% extends 'layouts/base.html' %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1106-1112">
+    <div class="cs-container">
+        <span class="cs-int-title">About Us</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/about/" class="cs-link cs-active">About Us</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)"
+            srcset="/assets/images/banner_image.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)"
+            srcset="/assets/images/banner_image.jpg">
+        <img decoding="async" src="/assets/images/banner_image.jpg"
+            alt="mechanic" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Senior & Military Discount: $100 Off Plumbing Service! </h2>
+            <a href="/coupons/" target="_blank" class="cs-button-solid" style="white-space: nowrap;">Get Coupons now!</a>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1067" class="cs-page-break">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Top left image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/about_leftimage.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/about_leftimage.jpg">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/about_leftimage.jpg" alt="Plumber" width="364" height="375">
+            </picture>
+            <!--Bottom right image-->
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/about_rightimage.webp">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/about_rightimage.webp">
+                <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/about_rightimage.webp" alt="about us 2" width="388" height="388">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Locally owned - Family Operated Business</span>
+            <h2 class="cs-title">Trusted Plumbing Expert since 2012</h2>
+            <p class="cs-text">Founded in 2012, KMS Plumbing & Gasfitting Ltd is an owner-operated provider of plumbing, drain cleaning, and gasfitting services in the Edmonton area. We strive to provide exceptional customer service and quality workmanship at a fair price. We are dedicated to providing a seamless and hassle-free service experience with prompt communication, professional service, and upfront pricing.
+            </p>
+            <ul class="cs-list">
+                <li class="cs-li">
+                    <picture>
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="{{ client.domain }}/assets/images/hassle-free.png" alt="hassle free" width="100"
+                            height="100">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Transparency</h3>
+                        <p class="cs-li-text">
+                            No Hidden Fees, No Travel Charges, No Extra Charges. Clear and upfront pricing.
+                        </p>
+                    </div>
+                </li>
+
+              <li class="cs-li">
+                <picture>
+                    <img class="cs-icon" loading="lazy" decoding="async"
+                        src="{{ client.domain }}/assets/images/clipboard-check.png" alt="clipboard-check" width="100" height="100">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">Quality Guarantee</h3>
+                    <p class="cs-li-text">
+                            KMS has complete confidence in the quality of our workmanship and the products we offer.
+                            We ensure that the materials we utilize in your home meet the highest standards of quality, safety, performance and durability. All supplies are covered under the standard manufacturer parts warranty (as applicable). In addition, KMS also provides a 1 year service warranty on our workmanship.
+                        </p>
+                </div>
+            </li>
+                <li class="cs-li">
+                    <picture>
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="{{ client.domain }}/assets/images/warranty.png" alt="warranty" width="100" height="100">
+                    </picture>
+                    <div class="cs-flex">
+                      <h3 class="cs-h3">Fully Qualified & Insured</h3>
+                      <p class="cs-li-text">
+                        Work performed by a Red Seal Certified Plumber & Gasfitter with over 15 years of experience. Expect the utmost care and attention from start to finish.
+                      </p>
+                  </div>
+              </li>
+
+                <li class="cs-li">
+                    <picture>
+                        <img class="cs-icon" loading="lazy" decoding="async"
+                            src="{{ client.domain }}/assets/images/bill-magnifying.png" alt="bill magnifying" width="100"
+                            height="100">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Free Estimates</h3>
+                        <p class="cs-li-text">
+                        Free Estimates. Contact us today for your Free Quote. No obligation!
+                    </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </section>
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">SAVE $75 on any plumbing service!</h2>
+            <a href="/coupons/" target="_blank" class="cs-button-solid" style="white-space: nowrap;">Get Coupons now!</a>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   KMS Badges                 -->
+<!-- ============================================ -->
+
+<section id="gallery-45">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Experience the KMS Difference</span>
+            <h2 class="cs-h3">Association & Memberships</h2>
+        </div>
+        <div class="trust-signals">
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/red-seal-certified.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/red-seal-certified.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/red-seal-certified.png" alt="red-seal-certified"
+                         height="79">
+                </picture>
+                <p class="cs-text">Red Seal Certified Plumber & Gasfitter</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/fully-insured.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/fully-insured.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/fully-insured.png" alt="fully-insured"
+                         height="79">
+                </picture>
+                <p class="cs-text">Fully Insured</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/service-warranty.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/service-warranty.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/service-warranty.png" alt="service-warranty"
+                         height="79">
+                </picture>
+                <p class="cs-text">1 Year Service Warranty</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/edmonton-chamber-logo.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/edmonton-chamber-logo.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/edmonton-chamber-logo.png" alt="edmonton-chamber-logo"
+                         height="79">
+                </picture>
+                <p class="cs-text">Edmonton Chamber of Commerce Certification</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/mcaa-logo.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/mcaa-logo.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/mcaa-logo.png" alt="mcaa-logo"
+                         height="79">
+                </picture>
+                <p class="cs-text">Mechanical Contractors Association of Alberta</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                 Ronald Sponsorship            -->
+<!-- ============================================ -->
+{% include "components/ronald-sponsorship.html" %}
+
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Book Now, Pay Later. Flexible financing options available
+            </h2>
+            <a href="https://www.financeit.ca/en/direct/payment-plan/YT0yNjE5MzgmbD0mcD1JMlZlYnJjaDRaRUFvbUd6bkgtUDJnJnM9MCZ2PTE=/apply?slug=WjM1yQ" target="_blank" class="cs-button-solid">Learn More</a>
+        </div>
+    </div>
+</section>
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-1833">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Our Client Testimonials</h2>
+        </div>
+        <div class="blaze-slider">
+            <div class="blaze-container">
+                <div class="blaze-track-container">
+                    <div class="blaze-track">
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img class="cs-stars" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                    <p class="cs-review-text">
+                                        ”We worked with Jack at KMS when we had our basement contracted. He did all the
+                                        plumbing for our basement bathroom. He provides high quality work and very
+                                        pleasant to work with. When we had an issue, he came out same day and kept in
+                                        contact with me to ensure it got completed. He even followed up to ensure all
+                                        was working well. I would hire again.”
+                                    </p>
+                                    <span class="cs-name">Miles McMillan</span>
+                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
+                                    <!--Quote-->
+                                    <img class="cs-quote" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img class="cs-stars" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                    <p class="cs-review-text">
+                                        ”Jack installed a new faucet and some upgraded sink components for us; the
+                                        service and workmanship were fantastic. He was very thorough in assessing our
+                                        needs/expectations prior to the job; the customer service was excellent
+                                        throughout our experience. I highly recommend KMS Plumbing.”
+                                    </p>
+                                    <span class="cs-name">Dave O.</span>
+                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
+                                    <!--Quote-->
+                                    <img class="cs-quote" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blaze-slide">
+                            <div class="cs-flex-group">
+                                <div class="cs-review-group">
+                                    <!--Stars-->
+                                    <img class="cs-stars" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                    <p class="cs-review-text">
+                                        ”I just had my hot water tank replacement completed by Jack Kumar of KMS
+                                        Plumbing & Gas fitting. Prior to this job, Jack had replaced a toilet for us and
+                                        completed a hot water tank replacement for a senior friend of ours. As usual,
+                                        Jack is on time and professional. His workmanship is great. Housekeeping is
+                                        excellent. Pricing is reasonable. Thanks for your service Jack.”
+                                    </p>
+                                    <span class="cs-name">Alex Chan</span>
+                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
+                                    <!--Quote-->
+                                    <img class="cs-quote" loading="lazy" decoding="async"
+                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                                        alt="quotes" width="97" height="80" aria-hidden="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blaze-nav">
+                    <div class="blaze-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!--Slider Initialization Script-->
+        <script>
+            const el = document.querySelector('.blaze-slider')
+            new BlazeSlider(el)
+        </script>
+        <a href="{{ client.google_review }}" class="cs-button-solid" target="_blank">See More Reviews</a>
+    </div>
+    <!--Texture Graphic-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 1023px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 1024px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png">
+        <img loading="lazy" decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png" alt="dotted texture"
+            width="1920" height="600">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--              Secondary Banner                -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Free Estimates & No Trip Charges </h2>
+            <a href="tel:5873404059" class="cs-button-solid">Call Now!</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ============================================ -->
+<!--                    Team                      -->
+<!-- ============================================ -->
+
+
+
+{% include "components/cta.html" %}
+
+
+{% endblock %}

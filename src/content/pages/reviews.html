@@ -1,0 +1,146 @@
+---
+title: "Reviews | KMS Plumbing & Gasfitting Ltd."
+description: |
+  KMS Plumbing & Gasfitting Ltd. – Providing efficient, reliable plumbing,
+  heating, and gas services with 15+ years of experience.
+  Trusted solutions for homes and businesses in Edmonton.
+  Additional functionality. Similar to our Intermediate Kits.
+permalink: "reviews/"
+---
+
+{% block head %}
+<link rel="stylesheet" href="https://kmsplumbingyeg.com/assets/css/reviews.css/">
+
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta
+  property="og:image"
+  content="{{ client.domain }}/assets/images/review_og.png"
+/>
+
+{% endblock %} {% extends 'layouts/base.html' %} {% block body %}
+
+
+<div class="review-container">
+    <h1 class="review-h1">Thank You for Choosing KMS Plumbing & Gasfitting Ltd.</h1>
+    <p class="review-subheader">
+      We’re grateful you trusted us with your plumbing and gasfitting needs. Please take a moment to rate your experience.
+      <br /> <br />
+      <strong>If you’re satisfied with our service, please select 5 stars and leave us a Google review.</strong><br />
+      <strong>If your experience was anything less than great, we’d love your honest feedback so we can make it right.</strong>
+    </p>
+
+    <div class="review-stars" id="starContainer">
+      <span class="star" data-rating="1">★</span>
+      <span class="star" data-rating="2">★</span>
+      <span class="star" data-rating="3">★</span>
+      <a href="https://maps.app.goo.gl/ziSayyvU6qofaYGD8" target="_blank" style="text-decoration: none; color: black;">
+        <span class="star" data-rating="4">★</span>
+      </a>
+      <a href="https://maps.app.goo.gl/ziSayyvU6qofaYGD8" target="_blank" style="text-decoration: none; color: black;">
+        <span class="star" data-rating="5">★</span>
+      </a>
+      
+    </div>
+
+    <div id="goodFeedback" class="review-feedback-section" style="display: none;">
+      <p>Thank you! We're thrilled you’re happy with our service. Please click below to leave us a Google review:</p>
+      <div class="review-buttons">
+        <a href="https://www.facebook.com/KMsSPlumbingyeg/" target="_blank">
+            <button class="review-button">Leave a Facebook Review</button>
+        </a>
+        <a href="https://maps.app.goo.gl/E5q5L71koyxKWpck8" target="_blank">
+          <button class="review-button">Leave a Google Review</button>
+        </a>
+      </div>
+    </div>
+
+    <div id="badFeedback" class="feedback-section" style="display: none;">
+      <p>We're sorry we didn’t meet your expectations. Please share your feedback and we’ll get in touch right away.</p>
+      <textarea class="textarea" rows="4" placeholder="Tell us what happened..."></textarea>
+      <input type="text" placeholder="Your name (optional)" />
+      <input type="email" placeholder="Your email or phone (optional)" />
+      <button class="review-button" onclick="sendFeedback()">Submit Feedback</button>
+    </div>
+
+    <div class="powered">
+      Powered by <a href="https://bespokewebdesign.ca/" target="_blank">Bespoke Web Design Edmonton</a>
+    </div>
+  </div>
+
+
+  <!-- Review Scripts -->
+  <script>
+    const stars = document.querySelectorAll('.star');
+    const starContainer = document.getElementById('starContainer');
+    const goodFeedback = document.getElementById('goodFeedback');
+    const badFeedback = document.getElementById('badFeedback');
+
+    stars.forEach(star => {
+      star.addEventListener('mouseover', () => {
+        const rating = parseInt(star.getAttribute('data-rating'));
+        highlightStars(rating);
+      });
+
+      star.addEventListener('mouseout', () => {
+        highlightStars(0);
+      });
+
+      star.addEventListener('click', () => {
+        const rating = parseInt(star.getAttribute('data-rating'));
+        stars.forEach(s => s.classList.remove('selected'));
+        star.classList.add('selected');
+        
+
+        if (rating >= 4) {
+          goodFeedback.style.display = 'none';
+          badFeedback.style.display = 'none';
+        } else {
+          goodFeedback.style.display = 'none';
+          badFeedback.style.display = 'block';
+        }
+
+        stars.forEach(star => {
+            const starRating = parseInt(star.getAttribute('data-rating'));
+            if (starRating <= rating) {
+            star.classList.add('selected');
+            } else {
+            star.classList.remove('selected');
+            }
+        })
+      });
+    });
+
+    function highlightStars(rating) {
+      stars.forEach(star => {
+        const starRating = parseInt(star.getAttribute('data-rating'));
+        if (starRating <= rating) {
+          star.classList.add('hover');
+        } else {
+          star.classList.remove('hover');
+        }
+      });
+    }
+
+
+    function sendFeedback() {
+      const message = document.querySelector('#badFeedback textarea').value.trim();
+      const name = document.querySelector('#badFeedback input[type="text"]').value.trim();
+      const contact = document.querySelector('#badFeedback input[type="email"]').value.trim();
+
+      const email = "admin@montanoplumbing.ca";
+      const subject = encodeURIComponent("Customer Feedback - MPC");
+      const body = encodeURIComponent(
+        `Customer Feedback:\n${message}\n\nName: ${name}\nContact: ${contact}`
+      );
+
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+
+
+    
+  </script>
+
+  <div class="line-div"></div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+[
+   {
+      "title": "Plumbing Services",
+      "discount": "$75 Off Any Plumbing Service",
+      "expiryDate": "04/12/2025",
+      "description": "Valid only for service indicated on coupon. Cannot be combined with other offers.",
+      "qrCodeSrc": "/assets/images/coupons/plumbercoupon.svg"
+   },
+   {
+      "title": "Sewer Line Drain Cleaning",
+      "discount": "$100 Off Any Main Sewer Line Drain Cleaning",
+      "expiryDate": "04/12/2025",
+      "description": "Valid only for service indicated on coupon.",
+      "qrCodeSrc": "/assets/images/coupons/sewerlinecoupon.svg"
+   },
+   {
+      "title": "Senior Discount",
+      "discount": "$100 Off Services for Senior Citizens",
+      "expiryDate": "04/12/2025",
+      "description": "Valid only for service indicated on coupon.",
+      "qrCodeSrc": "/assets/images/coupons/seniorcoupon.svg"
+   },
+   {
+      "title": "Military Discount",
+      "discount": "$100 Off Services for Military Personnel",
+      "expiryDate": "04/12/2025",
+      "description": "Valid only for service indicated on coupon.",
+      "qrCodeSrc": "/assets/images/coupons/militarycoupon.svg"
+   }
+]

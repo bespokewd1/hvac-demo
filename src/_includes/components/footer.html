@@ -1,0 +1,119 @@
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-840">
+    <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="/">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/kms-logo-2.svg" alt="logo" height="98">
+            </a>
+            <p class="cs-text">
+                Edmonton's Expert Plumbing & Gasfitting Service. Trusted Since 2012. 
+            </p>
+            <div class="cs-social">
+                <a class="cs-social-link" aria-label="visit facebook profile" href="{{ client.social.facebook }}">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/facebook.svg"" alt="facebook" width="11" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit instagram profile" href="{{ client.social.instagram }}">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/instagram.svg"" alt="twitter" width="11" height="11">
+                </a>
+            </div>
+
+        <div class="contacts-wrapper">
+            <!-- Contact Info -->
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <!--Make this link go to the google page-->
+                    <a class="cs-link" href="" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 8 14"/></svg>
+                        Monday – Friday, 7 AM – 5 PM
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="tel:{{ client.phoneForTel }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        {{ client.phoneFormatted }}
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="mailto:{{ client.email }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        {{ client.email }}
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <!--Make this link go to the google page-->
+                    <a class="cs-link" href="{{ client.address.mapLink }}" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                        {{ client.address.lineOne }} {{ client.address.lineTwo }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="cs-links-wrapper">
+        <!-- Links -->
+            <div class="cs-ul-wrapper">
+                <span class="cs-header">Quick Links</span>
+                <ul class="cs-ul cs-ul-1">
+                    <li class="cs-li">
+                        <a href="/" class="cs-link">Home</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/about-us/" class="cs-link">About Us</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/services/" class="cs-link">Services</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/portfolio/" class="cs-link">Portfolio</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/blog/" class="cs-link">Blog</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/reviews/" class="cs-link">Reviews</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/mylinks/" class="cs-link">Bio Link</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/financing/" class="cs-link">Financing</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cs-ul-wrapper">
+                <span class="cs-header">Services</span>
+                <ul class="cs-ul cs-ul-1">
+                    <li class="cs-li">
+                        <a href="{{client.domain}}/services/plumbing/" class="cs-link">Plumbing</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/services/gasfitting/" class="cs-link">Gas Fitting</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/services/drain-cleaning" class="cs-link">Drain Cleaning</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/services/hot-water-solutions/" class="cs-link">Hot Water Solutions</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="cs-bottom">
+        <span class="cs-credit">
+            © Copyright 2025 KMS Plumbing & Gasfitting LTD. Designed and Hand Coded by <a href="https://bespokewebdesign.ca/" class="cs-credit-link" target="_blank">Bespoke Web Design Edmonton</a>
+        </span>
+        <div class="cs-bottom-links">
+            <a href="/privacy-policy/" class="cs-bottom-link">Privacy Policy</a>
+            <a href="/terms-of-service/" class="cs-bottom-link">Terms Of Service</a>
+        </div>
+    </div>
+</footer>
+                                
