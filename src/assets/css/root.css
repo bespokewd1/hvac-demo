@@ -1782,7 +1782,7 @@
   }
   #hero-227 .cs-flex-group .cs-button-solid,
   #hero-227 .cs-flex-group .cs-button-transparent {
-    width: clamp(7.5rem, 3vw, 10.625rem);
+    width: clamp(9.375rem, 3vw, 10.625rem);
     margin-right: 0;
     font-size: 0.8125rem;
     -webkit-font-smoothing: antialiased;
@@ -1802,7 +1802,7 @@
   }
   #hero-227 .cs-flex-group .cs-button-solid,
   #hero-227 .cs-flex-group .cs-button-transparent {
-    width: clamp(9.375rem, 2.5vw, 11.25rem);
+    width: clamp(11rem, 2.5vw, 11.25rem);
     margin-right: 0;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;

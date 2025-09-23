@@ -1,1 +1,3 @@
-robots.html
+# Ignore artifacts:
+build
+coverage
