@@ -6,6 +6,9 @@ description: |
   Trusted solutions for homes and businesses in Edmonton.
   Additional functionality. Similar to our Intermediate Kits.
 permalink: "reviews/"
+eleventyNavigation:
+    key: 'Reviews'
+    order: '500'
 ---
 
 {% block head %}
@@ -40,7 +43,7 @@ permalink: "reviews/"
       <a href="https://maps.app.goo.gl/ziSayyvU6qofaYGD8" target="_blank" style="text-decoration: none; color: black;">
         <span class="star" data-rating="5">★</span>
       </a>
-      
+
     </div>
 
     <div id="goodFeedback" class="review-feedback-section" style="display: none;">
@@ -90,7 +93,7 @@ permalink: "reviews/"
         const rating = parseInt(star.getAttribute('data-rating'));
         stars.forEach(s => s.classList.remove('selected'));
         star.classList.add('selected');
-        
+
 
         if (rating >= 4) {
           goodFeedback.style.display = 'none';
@@ -138,7 +141,7 @@ permalink: "reviews/"
     }
 
 
-    
+
   </script>
 
   <div class="line-div"></div>

@@ -1,0 +1,143 @@
+---
+title: "Coupons | KMS Plumbing & Gasfitting Ltd."
+description: "KMS Plumbing & Gasfitting Ltd. – Providing efficient, reliable plumbing, heating, and gas services with 15+ years of experience. Trusted solutions for homes and businesses in Edmonton."
+permalink: 'offers/'
+eleventyNavigation:
+    key: 'Offers'
+    order: '400'
+---
+{% extends "layouts/base.html" %}
+
+{% block head %}
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
+        <meta property="og:image" content="{{ client.domain }}/assets/images/og_image.jpg">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+
+<!--          Blaze Assets        -->
+<link rel="stylesheet" href="/assets/css/blaze.css">
+<script src="/assets/js/blaze-slider.dev.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+{% endblock %}
+{% from "components/coupons.html" import renderCoupons %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<section id="coupons-intro">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Our Special Offers</h2>
+            <p class="cs-text">
+                Thank you for checking our coupons. Check each coupon and you can save or print.
+                You can scan in QR using your phone to save as well. We look forward to serving you soon.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="coupons">
+    {{ renderCoupons(coupons) }}
+</section>
+
+{# <section id="coupons-section"> #}
+{# </section> #}
+
+
+<!-- ============================================ -->
+<!--              Secondary Banner                -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Book Now, Pay Later. Flexible financing options available</h2>
+            <a href="{{ client.domain }}/contact/" class="cs-button-solid">Contact Us Now!</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   KMS Badges                 -->
+<!-- ============================================ -->
+
+<section id="gallery-45">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Experience the KMS Difference</span>
+            <h2 class="cs-h3">Association & Memberships</h2>
+        </div>
+        <div class="trust-signals">
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/red-seal-certified.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/red-seal-certified.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/red-seal-certified.png" alt="red-seal-certified"
+                         height="79">
+                </picture>
+                <p class="cs-text">Red Seal Certified Plumber & Gasfitter</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/fully-insured.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/fully-insured.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/fully-insured.png" alt="fully-insured"
+                         height="79">
+                </picture>
+                <p class="cs-text">Fully Insured</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/service-warranty.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/service-warranty.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/service-warranty.png" alt="service-warranty"
+                         height="79">
+                </picture>
+                <p class="cs-text">1 Year Service Warranty</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/edmonton-chamber-logo.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/edmonton-chamber-logo.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/edmonton-chamber-logo.png" alt="edmonton-chamber-logo"
+                         height="79">
+                </picture>
+                <p class="cs-text">Edmonton Chamber of Commerce Certification</p>
+            </div>
+            <div class="trust-signals-contents">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/mcaa-logo.png">
+                    <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/mcaa-logo.png">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/mcaa-logo.png" alt="mcaa-logo"
+                         height="79">
+                </picture>
+                <p class="cs-text">Mechanical Contractors Association of Alberta</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Ronald Sponsorship            -->
+<!-- ============================================ -->
+
+{% include "components/ronald-sponsorship.html" %}
+
+<!-- ============================================ -->
+<!--              Secondary Banner                -->
+<!-- ============================================ -->
+<section id="secondary-banner">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Free Estimates & No Trip Charges</h2>
+            <a href="tel:5873404059" class="cs-button-solid">Call Now!</a>
+        </div>
+    </div>
+</section>
+
+{% include "components/cta.html" %}
+
+
+{% endblock %}

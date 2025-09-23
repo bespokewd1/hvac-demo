@@ -85,13 +85,16 @@
 @media only screen and (min-width: 0rem) {
   :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --navBar-color: #b91c1c;
+    // --navBar-color: #b91c1c;
+    --navBar-color: #7f1d1d;
     --canada-banner-bg: #d76d2a;
     // --primary: #3d92cf;
     --primary: #1a3a7c;
-    --primaryLight: #f4a44a;
+    --primaryLight: #f87171;
     --primaryBreaker: #f0f0f020;
-    --secondary: #d06928;
+    // --secondary: #d06928;
+    // --secondary: #0a0a0a;
+    --secondary: #1c1917;
     --secondaryLight: #f4a44a;
     // --headerColor: #1a1a1a;
     --headerColor: #2a1768;
@@ -1027,7 +1030,8 @@
       max-width: (1280/16rem);
       margin: auto;
       display: grid;
-      grid-template-columns: auto 1fr auto;
+      // grid-template-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr;
       // justify-content: flex-end;
       align-items: center;
       gap: (24/16rem);
@@ -1061,7 +1065,8 @@
     }
 
     .cs-nav {
-      place-self: center;
+      // place-self: center;
+      place-self: end;
     }
     .cs-ul-wrapper {
       // unset absolute position use grid instead

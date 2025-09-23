@@ -1,19 +1,20 @@
 ---
-title: "Portfolio | KMS Plumbing & Gasfitting Ltd."
+title: "Drain Cleaning | KMS Plumbing & Gasfitting Ltd."
 description: "KMS Plumbing & Gasfitting Ltd. – Providing efficient, reliable plumbing, heating, and gas services with 15+ years of experience. Trusted solutions for homes and businesses in Edmonton."
-permalink: 'portfolio/'
+permalink: 'services/drain-cleaning.html'
+eleventyNavigation:
+    key: 'Dryer Vent Cleaning'
+    order: 3300
+    parent: 'Services'
 ---
-
 
 {% block head %}
         <meta property="og:title" content="{{ title }}">
         <meta property="og:description" content="{{ description }}">
         <meta property="og:image" content="{{ client.domain }}/assets/images/og_image.jpg">
-<link rel="stylesheet" href="{{ client.domain }}/assets/css/portfolio.css">
+    <link rel="stylesheet" href="/assets/css/services.css">
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
-<!--          Blaze Assets        -->
-<link rel="stylesheet" href="{{ client.domain }}/assets/css/blaze.css">
-<script src="{{ client.domain }}/assets/js/blaze-slider.dev.js"></script>
 {% endblock %}
 
 {% extends 'layouts/base.html' %}
@@ -26,10 +27,10 @@ permalink: 'portfolio/'
 
 <div id="banner-1106-1112">
     <div class="cs-container">
-        <span class="cs-int-title">Portfolio</span>
+        <span class="cs-int-title">Drain Cleaning</span>
         <div class="cs-breadcrumbs">
             <a href="/" class="cs-link">Home</a>
-            <a href="/portfolio/" class="cs-link cs-active">Portfolio</a>
+            <a href="/services/drain-cleaning/" class="cs-link cs-active">Drain Cleaning</a>
         </div>
     </div>
     <!--Background Image-->
@@ -38,8 +39,7 @@ permalink: 'portfolio/'
         <source media="(max-width: 600px)" srcset="/assets/images/banner_image.jpg">
         <!--Tablet and above Image-->
         <source media="(min-width: 601px)" srcset="/assets/images/banner_image.jpg">
-        <img decoding="async" src="/assets/images/banner_image.jpg" alt="mechanic" width="1280" height="568"
-            aria-hidden="true">
+        <img decoding="async" src="/assets/images/banner_image.jpg" alt="mechanic" width="1280" height="568" aria-hidden="true">
     </picture>
 </div>
 
@@ -53,6 +53,54 @@ permalink: 'portfolio/'
             <a href="/coupons/" target="_blank" class="cs-button-solid" style="white-space: nowrap;">Get Coupons now!</a>
     </div>
 </section>
+
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-218">
+    <div class="cs-container">
+        <img class="cs-bg-image" aria-hidden="true" src="/assets/images/blog3.jpg" alt="">
+        <div class="cs-content">
+            <span class="cs-topper">Committed to Fast, Reliable Service</span>
+            <h2 class="cs-title">Drain Cleaning Services</h2>
+            <p class="cs-text">
+                Clogged drains can lead to serious plumbing issues if left untreated. Our professional drain cleaning services effectively remove blockages, prevent backups, and keep your pipes flowing smoothly.
+            </p>
+            <a href="tel:5873404059" class="cs-button-solid">Call for Quote</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/images/services/draing-cleaning/unclogging.png" alt="icon" width="77" height="77">
+                <h3 class="cs-h3">Unclogging</h3>
+                <p class="cs-item-text">
+                    Fast, effective drain clearing to restore flow.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/images/services/draing-cleaning/drain-cleaning.png" alt="icon" width="77" height="77">
+                <h3 class="cs-h3">Drain Cleaning & Repair</h3>
+                <p class="cs-item-text">
+                    Comprehensive cleaning and repairs for all types of drains.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/images/services/draing-cleaning/sewer-cleaning.png" alt="icon" width="77" height="77">
+                <h3 class="cs-h3">Sewer Services</h3>
+                <p class="cs-item-text">
+                    Sewer line cleaning, inspection, and repair to keep everything running smoothly.
+
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Pricing                    -->
+<!-- ============================================ -->
 
 
 <!-- ============================================ -->
@@ -189,9 +237,8 @@ permalink: 'portfolio/'
         <a href="https://www.instagram.com/kmsplumbingandgasfitting/" target="_blank" class="cs-button-solid">Check Out More Photos</a>
     </div>
 </section>
-
 <!-- ============================================ -->
-<!--                   CTA                        -->
+<!--                     CTA                      -->
 <!-- ============================================ -->
 
 <section id="secondary-banner">
@@ -203,7 +250,6 @@ permalink: 'portfolio/'
         </div>
     </div>
 </section>
-
 
 
 <!-- ============================================ -->
@@ -273,123 +319,23 @@ permalink: 'portfolio/'
 {% include "components/ronald-sponsorship.html" %}
 
 
-<section id="reviews-1833">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Testimonials</span>
-            <h2 class="cs-title">Our Client Testimonials</h2>
-        </div>
-        <div class="blaze-slider">
-            <div class="blaze-container">
-                <div class="blaze-track-container">
-                    <div class="blaze-track">
-                        <div class="blaze-slide">
-                            <div class="cs-flex-group">
-                                <div class="cs-review-group">
-                                    <!--Stars-->
-                                    <img class="cs-stars" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                    <p class="cs-review-text">
-                                        ”We worked with Jack at KMS when we had our basement contracted. He did all the
-                                        plumbing for our basement bathroom. He provides high quality work and very
-                                        pleasant to work with. When we had an issue, he came out same day and kept in
-                                        contact with me to ensure it got completed. He even followed up to ensure all
-                                        was working well. I would hire again.”
-                                    </p>
-                                    <span class="cs-name">Miles McMillan</span>
-                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
-                                    <!--Quote-->
-                                    <img class="cs-quote" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blaze-slide">
-                            <div class="cs-flex-group">
-                                <div class="cs-review-group">
-                                    <!--Stars-->
-                                    <img class="cs-stars" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                    <p class="cs-review-text">
-                                        ”Jack installed a new faucet and some upgraded sink components for us; the
-                                        service and workmanship were fantastic. He was very thorough in assessing our
-                                        needs/expectations prior to the job; the customer service was excellent
-                                        throughout our experience. I highly recommend KMS Plumbing.”
-                                    </p>
-                                    <span class="cs-name">Dave O.</span>
-                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
-                                    <!--Quote-->
-                                    <img class="cs-quote" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blaze-slide">
-                            <div class="cs-flex-group">
-                                <div class="cs-review-group">
-                                    <!--Stars-->
-                                    <img class="cs-stars" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                    <p class="cs-review-text">
-                                        ”I just had my hot water tank replacement completed by Jack Kumar of KMS
-                                        Plumbing & Gas fitting. Prior to this job, Jack had replaced a toilet for us and
-                                        completed a hot water tank replacement for a senior friend of ours. As usual,
-                                        Jack is on time and professional. His workmanship is great. Housekeeping is
-                                        excellent. Pricing is reasonable. Thanks for your service Jack.”
-                                    </p>
-                                    <span class="cs-name">Alex Chan</span>
-                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
-                                    <!--Quote-->
-                                    <img class="cs-quote" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="blaze-nav">
-                    <div class="blaze-pagination"></div>
-                </div>
-            </div>
-        </div>
-        <!--Slider Initialization Script-->
-        <script>
-            const el = document.querySelector('.blaze-slider')
-            new BlazeSlider(el)
-        </script>
-        <a href="{{ client.google_review }}" class="cs-button-solid" target="_blank">See More Reviews</a>
-    </div>
-    <!--Texture Graphic-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 1023px)"
-            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 1024px)"
-            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png">
-        <img loading="lazy" decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png" alt="dotted texture"
-            width="1920" height="600">
-    </picture>
-</section>
 
 <!-- ============================================ -->
-<!--              Secondary Banner                -->
+<!--                  Modal Coupon                  -->
 <!-- ============================================ -->
-<section id="secondary-banner">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">Free Estimates & No Trip Charges</h2>
-            <a href="tel:5873404059" class="cs-button-solid">Call Now!</a>
+<div id="couponModal" class="coupon-modal" style="display: none;">
+    <div class="coupon-modal-content">
+        <div class="coupon-modal-header">
+            <span class="coupon-modal-close-button">×</span>
+            <h2 class="cs-title">Thank you for using our coupons</h2>
+        </div>
+        <div class="coupon-modal-body">
+            <div id="coupons"></div>
         </div>
     </div>
-</section>
+</div>
+
+
 
 
 {% include "components/cta.html" %}
