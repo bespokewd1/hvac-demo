@@ -1,4 +1,108 @@
 /*-- -------------------------- -->
+<---        Why Choose Us       -->
+<--- -------------------------- -*/
+
+// Variables
+@primary: var(--primary);
+@sectionPadding: var(--sectionPadding);
+
+/* Mobile - 360px */
+#why-choose-us {
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+
+  .cs-picture {
+    display: contents;
+    img {
+      max-width: 200px;
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      height: auto;
+    }
+  }
+  .cs-text {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  .cs-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cs-h3 {
+      color: var(--headerColor);
+    }
+  }
+
+  .trust-signals {
+    display: grid;
+    row-gap: (16/16rem);
+    .trust-signals-contents {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .trust-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) {
+  #why-choose-us {
+    padding: @sectionPadding;
+
+    .trust-signals {
+      grid-column: 1rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+}
+
+/* laptop - 769px and up */
+@media only screen and (min-width: 993px) {
+  #why-choose-us {
+    .trust-signals {
+      // grid-column: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: min-content;
+    }
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  #why-choose-us {
+    .trust-signals {
+      column-gap: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  #why-choose-us {
+  }
+}
+
+/*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/
 
@@ -59,6 +163,7 @@
 
     .cs-text {
       margin-bottom: (16/16rem);
+
       &:last-of-type {
         margin-bottom: (32/16rem);
       }

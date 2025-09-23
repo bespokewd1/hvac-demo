@@ -1,67 +1,114 @@
-<div class="sticky-div">
-  <a href="tel:{{ client.phoneForTel }}" class="cs-button-solid sticky-button"
-    >Call Today - {{ client.phoneFormatted }}
+<div class="sticky-bar" role="region" aria-label="Contact actions">
+  <a
+    href="tel:{{ client.phoneForTel }}"
+    class="cs-button-solid sticky-btn"
+    aria-label="Call Now"
+  >
+    Call Now
+  </a>
+  <a
+    href="sms:{{ client.phoneForTel }}"
+    class="cs-button-outline sticky-btn"
+    aria-label="Text Now"
+  >
+    Text Now
   </a>
 </div>
 
 <style>
-  .sticky-div {
+  /* Base hidden state */
+  .sticky-bar {
     position: fixed;
+    left: 0;
+    right: 0;
     bottom: 8px;
-    width: 100%;
     display: flex;
-    visibility: hidden;
-    opacity: 0;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
     transform: translateY(50%);
+    opacity: 0;
+    visibility: hidden;
     z-index: 100;
     transition:
       transform 200ms ease-in,
-      visibility 200ms ease-in,
-      opacity 200ms ease-in;
-  }
-  .cs-button-solid.sticky-button {
-    margin: auto;
-    border-radius: 70px;
-    background-color: var(--secondary);
+      opacity 200ms ease-in,
+      visibility 200ms ease-in;
+    /* Prevent layout shift from safe areas on iOS */
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
   }
 
-  body.show-btn .sticky-div {
-    visibility: visible;
-    opacity: 1;
+  /* Buttons */
+  .sticky-btn {
+    flex: 1 1 160px;
+    max-width: 220px;
+    text-align: center;
+    border-radius: 999px;
+    padding: 12px 16px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  /* Solid = Call */
+  .cs-button-solid.sticky-btn {
+    color: #fff;
+    background-color: var(--primary);
+    border: 2px solid var(--secondary);
+  }
+
+  /* Outline = Text */
+  .cs-button-outline.sticky-btn {
+    color: var(--secondary);
+    background-color: #fff;
+    border: 2px solid var(--secondary);
+  }
+
+  /* Reveal when body.show-btn is present */
+  body.show-btn .sticky-bar {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Only show on mobile & tablet; hide on desktop */
+  /* Adjust 1024px to your design’s breakpoint */
+  @media (min-width: 1024px) {
+    .sticky-bar {
+      display: none;
+    }
   }
 </style>
 
 <script defer>
   document.addEventListener("DOMContentLoaded", function () {
     const mainElement = document.getElementById("main");
-    let firstChildOfMain = null;
-
-    if (mainElement) {
-      const hero = document.getElementById("hero-227");
-      firstChildOfMain = hero ? hero : mainElement.firstElementChild;
-    } else {
+    if (!mainElement) {
       console.warn(
-        'No <main id="main"> element found. Sticky button will always be visible.',
+        'No <main id="main"> element found. Sticky bar will always be visible.',
       );
+      document.body.classList.add("show-btn");
       return;
     }
 
+    const hero = document.getElementById("hero-227");
+    const firstChildOfMain = hero ? hero : mainElement.firstElementChild;
+
     if (!firstChildOfMain) {
       console.warn(
-        '<main id="main"> has no first child. Sticky button will always be visible.',
+        '<main id="main"> has no first child. Sticky bar will always be visible.',
       );
+      document.body.classList.add("show-btn");
       return;
     }
 
     const body = document.body;
-    let ticking = false; // for throttling
+    let ticking = false;
 
     function checkFirstChildVisibility() {
-      if (!firstChildOfMain) return; // Exit if firstChildOfMain is null (already handled in DOMContentLoaded, but for safety)
-
       const rect = firstChildOfMain.getBoundingClientRect();
-      // Check if the bottom of the first child is above the viewport
       if (rect.bottom <= 0) {
         body.classList.add("show-btn");
       } else {
@@ -79,9 +126,8 @@
       }
     }
 
-    // Initial check in case the page loads already scrolled past the first child
+    // On load and on scroll
     checkFirstChildVisibility();
-
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
   });
 </script>

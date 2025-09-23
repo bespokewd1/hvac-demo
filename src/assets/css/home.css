@@ -1,4 +1,83 @@
 /*-- -------------------------- -->
+<---        Why Choose Us       -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+#why-choose-us {
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+#why-choose-us .cs-picture {
+  display: contents;
+}
+#why-choose-us .cs-picture img {
+  max-width: 200px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  height: auto;
+}
+#why-choose-us .cs-text {
+  text-align: center;
+  font-weight: 600;
+}
+#why-choose-us .cs-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 4rem);
+}
+#why-choose-us .cs-content {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#why-choose-us .cs-content .cs-h3 {
+  color: var(--headerColor);
+}
+#why-choose-us .trust-signals {
+  display: grid;
+  row-gap: 1rem;
+}
+#why-choose-us .trust-signals .trust-signals-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#why-choose-us .trust-signals .trust-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+@media only screen and (min-width: 577px) {
+  #why-choose-us {
+    padding: var(--sectionPadding);
+  }
+  #why-choose-us .trust-signals {
+    grid-column: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+/* laptop - 769px and up */
+@media only screen and (min-width: 993px) {
+  #why-choose-us .trust-signals {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  #why-choose-us .trust-signals {
+    column-gap: 2rem;
+  }
+}
+/*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/
 /* Mobile - 360px */

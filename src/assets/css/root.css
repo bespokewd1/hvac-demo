@@ -103,17 +103,24 @@
 <--- -------------------------- -*/
 @media only screen and (min-width: 0rem) {
   :root {
-    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     --navBar-color: #7f1d1d;
-    --canada-banner-bg: #d76d2a;
-    --primary: #1a3a7c;
-    --primaryLight: #f87171;
-    --primaryBreaker: #f0f0f020;
-    --secondary: #1c1917;
-    --secondaryLight: #f4a44a;
-    --headerColor: #2a1768;
-    --bodyTextColor: #4e4b66;
-    --bodyTextColorWhite: #fafbfc;
+    --primary: #991b1b;
+    --primaryLight: #ef4444;
+    --primaryDark: #991b1b;
+    --primaryBreaker: #ffffff12;
+    --secondary: #111827;
+    --secondaryLight: #374151;
+    --headerColor: #0b0b0d;
+    --bodyTextColor: #374151;
+    --bodyTextColorWhite: #f9fafb;
+    --surface: #ffffff;
+    --surfaceAlt: #f3f4f6;
+    --borderColor: #e5e7eb;
+    --accent: #fca5a5;
+    --focusRing: #ef4444;
+  }
+  :root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
