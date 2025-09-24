@@ -71,10 +71,270 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: min-content;
   }
+  #why-choose-us .trust-signals .trust-label {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1201px) {
   #why-choose-us .trust-signals {
     column-gap: 2rem;
+  }
+}
+/*-- -------------------------- */
+/*        Services (Ducts)      */
+/*-- -------------------------- */
+#services-ducts {
+  padding: var(--sectionPadding);
+  background: #fff;
+  /* Grid (≥768px) */
+  /* Shared card styles */
+  /* Blaze slider container (≤767px) */
+  /* Show/hide based on breakpoint */
+  /* Grid spacing for 3x2 layout */
+  /* Blaze nav styling shown only on mobile */
+}
+#services-ducts .cs-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 4rem);
+}
+#services-ducts .cs-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#services-ducts .cs-header .cs-topper {
+  color: var(--secondary);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+#services-ducts .cs-header .cs-title {
+  color: var(--headerColor);
+  margin: 0 0 1rem 0;
+  font-weight: 800;
+  line-height: 1.1;
+}
+#services-ducts .cs-header .cs-intro {
+  color: var(--bodyTextColor);
+  max-width: 48rem;
+  margin: 0 auto;
+}
+#services-ducts .card-grid {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1.25rem;
+}
+#services-ducts .card {
+  max-width: 500px;
+  margin-inline: auto;
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+#services-ducts .card .card-media {
+  display: block;
+  margin: 0;
+}
+#services-ducts .card .card-media img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+#services-ducts .card .card-body {
+  flex: 1;
+  padding: 1rem 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+#services-ducts .card .card-title {
+  margin: 0 0 0.35rem;
+  color: var(--headerColor);
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+#services-ducts .card .card-desc {
+  margin: 0 0 0.85rem;
+  color: var(--bodyTextColor);
+  font-size: 0.975rem;
+  line-height: 1.5;
+}
+#services-ducts .card:hover {
+  transform: translateY(-2px);
+  border-color: #ddd;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+#services-ducts .cs-button-outline {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+#services-ducts .cs-button-outline:hover {
+  background: var(--primary);
+  color: #fff;
+}
+#services-ducts .cs-button-outline:hover .button-outline-icon {
+  transform: translateX(0);
+}
+#services-ducts .cs-button-outline .button-outline-icon {
+  display: flex;
+  transform: translateX(-25%);
+  transition: transform 250ms ease;
+}
+#services-ducts .cs-button-solid {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  background: var(--primary);
+}
+#services-ducts .cs-all-link {
+  margin: 1.5rem auto 0;
+  display: inline-flex;
+}
+#services-ducts .cards-slider {
+  /* hidden on desktop */
+  display: block;
+  max-width: 100%;
+}
+#services-ducts .cards-slider .blaze-track {
+  /* nicer spacing */
+  padding: 0.25rem 0;
+}
+@media (min-width: 48rem) {
+  #services-ducts {
+    /* 768px */
+  }
+  #services-ducts .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+  }
+  #services-ducts .cards-slider {
+    display: none;
+  }
+}
+@media (min-width: 64rem) {
+  #services-ducts {
+    /* 1024px */
+  }
+  #services-ducts .card-grid {
+    gap: 1.5rem;
+  }
+  #services-ducts .card .card-media img {
+    height: 200px;
+  }
+}
+@media (max-width: 47.999rem) {
+  #services-ducts .blaze-nav {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr 2.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  #services-ducts .blaze-nav .blaze-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  #services-ducts .blaze-nav .blaze-pagination button {
+    /* dot style */
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: #e0e0e0;
+    border: none;
+    position: relative;
+    line-height: 0;
+    padding: 0;
+    /* hide numeric text but keep it for SRs */
+    color: transparent;
+    font-size: 0;
+    /* fallback hiding */
+    text-indent: -9999px;
+    /* extra safety if theme resets font-size */
+    overflow: hidden;
+    color: #e0e0e0;
+    /* base dot color via currentColor */
+  }
+  #services-ducts .blaze-nav .blaze-pagination button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: currentColor;
+    /* use currentColor so we can theme via color below */
+  }
+  #services-ducts .blaze-nav .blaze-pagination button.active {
+    color: var(--primary);
+    transform: scale(1.15);
+  }
+  #services-ducts .blaze-nav .blaze-prev,
+  #services-ducts .blaze-nav .blaze-next {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    position: relative;
+    transition: border-color 160ms ease, background-color 160ms ease;
+  }
+  #services-ducts .blaze-nav .blaze-prev:hover,
+  #services-ducts .blaze-nav .blaze-next:hover {
+    border-color: var(--primary);
+    background: #fafafa;
+  }
+  #services-ducts .blaze-nav .blaze-prev:before,
+  #services-ducts .blaze-nav .blaze-next:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--headerColor);
+    border-right: 2px solid var(--headerColor);
+    transform: rotate(45deg);
+  }
+  #services-ducts .blaze-nav .blaze-prev:before {
+    transform: rotate(-135deg);
+  }
+  #services-ducts .blaze-nav .blaze-next:before {
+    transform: rotate(45deg);
   }
 }
 /*-- -------------------------- -->

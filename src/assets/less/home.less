@@ -85,6 +85,10 @@
       // grid-column: 1rem;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: min-content;
+
+      .trust-label {
+        display: none;
+      }
     }
   }
 }
@@ -99,6 +103,291 @@
 
 @media only screen and (min-width: 80rem) {
   #why-choose-us {
+  }
+}
+
+/*-- -------------------------- */
+/*        Services (Ducts)      */
+/*-- -------------------------- */
+
+#services-ducts {
+  padding: var(--sectionPadding);
+  background: #fff;
+  .cs-container {
+    // width: 100%;
+    // max-width: 80rem;
+    // margin: 0 auto;
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  .cs-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    .cs-topper {
+      color: var(--secondary);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 0.25rem;
+    }
+    .cs-title {
+      color: var(--headerColor);
+      margin: 0 0 1rem 0;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .cs-intro {
+      color: var(--bodyTextColor);
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+  }
+
+  /* Grid (≥768px) */
+  .card-grid {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.25rem;
+  }
+
+  /* Shared card styles */
+  .card {
+    max-width: 500px;
+    margin-inline: auto;
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease,
+      border-color 180ms ease;
+    .card-media {
+      display: block;
+      margin: 0;
+      img {
+        display: block;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+    }
+    .card-body {
+      flex: 1;
+      padding: 1rem 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      // gap: 0.85rem;
+    }
+    .card-title {
+      margin: 0 0 0.35rem;
+      color: var(--headerColor);
+      font-size: 1.125rem;
+      line-height: 1.2;
+    }
+    .card-desc {
+      margin: 0 0 0.85rem;
+      color: var(--bodyTextColor);
+      font-size: 0.975rem;
+      line-height: 1.5;
+    }
+    &:hover {
+      transform: translateY(-2px);
+      border-color: #ddd;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  .cs-button-outline {
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      background-color 160ms ease,
+      color 160ms ease,
+      border-color 160ms ease;
+    &:hover {
+      background: var(--primary);
+      color: #fff;
+
+      .button-outline-icon {
+        transform: translateX(0);
+      }
+    }
+
+    .button-outline-icon {
+      display: flex;
+      transform: translateX(-25%);
+      transition: transform 250ms ease;
+    }
+  }
+
+  .cs-button-solid {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 1.5rem;
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    background: var(--primary);
+  }
+
+  .cs-all-link {
+    margin: 1.5rem auto 0;
+    display: inline-flex;
+  }
+
+  /* Blaze slider container (≤767px) */
+  .cards-slider {
+    /* hidden on desktop */
+    display: block;
+    max-width: 100%;
+    .blaze-track {
+      /* nicer spacing */
+      padding: 0.25rem 0;
+
+      .blaze-slide {
+        // max-width: 500px;
+        // margin-inline: auto;
+      }
+    }
+  }
+
+  /* Show/hide based on breakpoint */
+  @media (min-width: 48rem) {
+    /* 768px */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: 1fr;
+    }
+    .cards-slider {
+      display: none;
+    }
+  }
+
+  /* Grid spacing for 3x2 layout */
+  @media (min-width: 64rem) {
+    /* 1024px */
+    .card-grid {
+      gap: 1.5rem;
+    }
+    .card .card-media img {
+      height: 200px;
+    }
+  }
+
+  /* Blaze nav styling shown only on mobile */
+  @media (max-width: 47.999rem) {
+    .blaze-nav {
+      display: grid;
+      grid-template-columns: 2.5rem 1fr 2.5rem;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      max-width: 500px;
+      margin-inline: auto;
+
+      .blaze-pagination {
+        @button-size: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        button {
+          /* dot style */
+          width: @button-size;
+          height: @button-size;
+          border-radius: 50%;
+          background: #e0e0e0;
+          border: none;
+          position: relative;
+          line-height: 0;
+          padding: 0;
+          /* hide numeric text but keep it for SRs */
+          color: transparent;
+          font-size: 0; /* fallback hiding */
+          text-indent: -9999px; /* extra safety if theme resets font-size */
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: @button-size;
+            height: @button-size;
+            border-radius: 50%;
+            background: currentColor;
+            /* use currentColor so we can theme via color below */
+          }
+
+          color: #e0e0e0; /* base dot color via currentColor */
+
+          &.active {
+            color: var(--primary);
+            transform: scale(1.15);
+          }
+        }
+      }
+
+      .blaze-prev,
+      .blaze-next {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        background: #fff;
+        position: relative;
+        transition:
+          border-color 160ms ease,
+          background-color 160ms ease;
+        &:hover {
+          border-color: var(--primary);
+          background: #fafafa;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          margin: auto;
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid var(--headerColor);
+          border-right: 2px solid var(--headerColor);
+          transform: rotate(45deg);
+        }
+      }
+      .blaze-prev:before {
+        transform: rotate(-135deg);
+      }
+      .blaze-next:before {
+        transform: rotate(45deg);
+      }
+    }
   }
 }
 

@@ -18,6 +18,7 @@ eleventyNavigation:
 <!--          Blaze Assets        -->
 <link rel="stylesheet" href="assets/css/blaze.css">
 <script src="assets/js/blaze-slider.dev.js"></script>
+<script src="assets/js/home.js"></script>
 
 <!--          Acuity Assets        -->
 <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/25366455.css" id="acuity-button-styles" /><script src="https://embed.acuityscheduling.com/embed/button/25366455.js" async></script>
@@ -182,12 +183,145 @@ eleventyNavigation:
     </div>
 </section> #}
 
+<!-- ============================================ -->
+<!--              Duct/HVAC Services              -->
+<!-- ============================================ -->
+<section id="services-ducts" aria-labelledby="services-ducts-title">
+  <div class="cs-container">
+    <header class="cs-header">
+      <span class="cs-topper">Our Services</span>
+      <h2 class="cs-title" id="services-ducts-title">
+        Breathe Better With Our HVAC & Duct Services
+      </h2>
+      <p class="cs-intro">
+        Cleaner air, safer systems, and efficient comfort—delivered by
+        certified pros serving Edmonton and surrounding areas.
+      </p>
+    </header>
+
+    {# Data source so content is easy to maintain #}
+    {% set duct_services = [
+      {
+        title: "Air Duct Cleaning",
+        desc: "Remove dust and allergens for fresher air throughout your home.",
+        img: "/assets/images/services/service-1.webp",
+        alt: "Air duct cleaning icon",
+        url: "/services/air-duct-cleaning"
+      },
+      {
+        title: "Furnace Cleaning",
+        desc: "Improve efficiency and extend furnace life with a deep clean.",
+        img: "/assets/images/services/service-2.webp",
+        alt: "Furnace cleaning icon",
+        url: "/services/furnace-cleaning"
+      },
+      {
+        title: "Dryer Vent Cleaning",
+        desc: "Reduce fire risk and dry clothes faster with a clear vent.",
+        img: "/assets/images/services/service-3.webp",
+        alt: "Dryer vent cleaning icon",
+        url: "/services/dryer-vent-cleaning"
+      },
+      {
+        title: "HVAC Maintenance",
+        desc: "Seasonal tune-ups that keep heating and cooling performing.",
+        img: "/assets/images/services/service-4.webp",
+        alt: "HVAC maintenance icon",
+        url: "/services/hvac-maintenance"
+      },
+      {
+        title: "AC Cleaning & Installation",
+        desc: "Cleaner coils and expert installs for reliable summer comfort.",
+        img: "/assets/images/services/service-5.webp",
+        alt: "AC cleaning and installation icon",
+        url: "/services/ac-cleaning-and-installation"
+      },
+      {
+        title: "Indoor Air Quality Solutions",
+        desc: "Filters, UV, and humidification to protect your family’s air.",
+        img: "/assets/images/services/service-6.webp",
+        alt: "Indoor air quality icon",
+        url: "/services/indoor-air-quality"
+      }
+    ] %}
+
+    <!-- Desktop/Tablet Grid (visible ≥768px) -->
+    <ul class="card-grid" role="list">
+      {% for s in duct_services %}
+      <li class="card">
+        <figure class="card-media">
+          <img
+            src="{{ s.img }}"
+            alt="{{ s.alt }}"
+            width="320"
+            height="200"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title">{{ s.title }}</h3>
+          <p class="card-desc">{{ s.desc }}</p>
+          <a class="cs-button-outline" href="{{ s.url }}">
+            Learn More
+            <span class="button-outline-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7l5 5l-5 5m6-10l5 5l-5 5"/></svg>
+            </span>
+          </a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Mobile Carousel (visible ≤767px) -->
+    <div class="blaze-slider cards-slider" aria-hidden="true">
+      <div class="blaze-container">
+        <div class="blaze-track-container">
+          <div class="blaze-track">
+            {% for s in duct_services %}
+            <div class="blaze-slide">
+              <article class="card">
+                <figure class="card-media">
+                  <img
+                    src="{{ s.img }}"
+                    alt="{{ s.alt }}"
+                    width="320"
+                    height="200"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div class="card-body">
+                  <h3 class="card-title">{{ s.title }}</h3>
+                  <p class="card-desc">{{ s.desc }}</p>
+                  <a class="cs-button-outline" href="{{ s.url }}">Learn More</a>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Nav: dots + arrows (only shown on mobile via CSS) -->
+        <div class="blaze-nav">
+          <button class="blaze-prev" aria-label="Previous service"></button>
+          <div class="blaze-pagination"></div>
+          <button class="blaze-next" aria-label="Next service"></button>
+        </div>
+      </div>
+    </div>
+
+    <a class="cs-button-solid cs-all-link" href="/services">
+      Check All Services
+    </a>
+  </div>
+</section>
 
 <!-- ============================================ -->
 <!--                  Services                    -->
 <!-- ============================================ -->
 
-<section id="services-1644">
+{# <section id="services-1644">
     <div class="cs-container">
         <div id="cs-content-829">
             <div class="cs-flex">
@@ -395,7 +529,7 @@ eleventyNavigation:
         </ul>
         <a href="tel:5873404059" class="cs-button-solid">Call Now for Quote</a>
     </div>
-</section>
+</section> #}
 
 <!-- ============================================ -->
 <!--                     CTA                      -->
