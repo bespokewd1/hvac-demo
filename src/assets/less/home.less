@@ -665,6 +665,14 @@
 
     .sa-item {
       margin: 0;
+
+      &.active {
+        .sa-link {
+          border-color: var(--primary);
+          box-shadow: 0 0 0 1px var(--primary);
+          transform: translateY(-1px);
+        }
+      }
     }
 
     .sa-link {
@@ -812,7 +820,7 @@
 @media only screen and (min-width: 64rem) {
   #service-areas {
     .sa-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
     .sa-map {

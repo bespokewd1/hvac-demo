@@ -112,37 +112,93 @@ if (document.readyState === "loading") {
 
 
 // Lazy load Google Map on user interaction (performance/privacy friendly)
-(function initServiceAreasMap() {
-  const root = document.querySelector('#service-areas .sa-map');
-  if (!root) return;
+function initInteractiveServiceMap() {
+    const root = document.querySelector('#service-areas');
+    if (!root) return;
 
-  const overlay = root.querySelector('.sa-map-overlay');
-  if (!overlay) return;
+    const items = root.querySelectorAll('.sa-item[data-map-src]');
+    const mapContainer = root.querySelector('.sa-map');
 
-  // Replace this with your actual Google Maps embed src
-  // Tip: In Google Maps, click Share > Embed a map > copy the iframe src.
-  const MAP_SRC =
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...'; // TODO: paste real embed URL
-
-  const loadMap = () => {
-    if (root.querySelector('iframe')) return;
-    const iframe = document.createElement('iframe');
-    iframe.title = 'Service Areas Map';
-    iframe.loading = 'lazy';
-    iframe.referrerPolicy = 'no-referrer-when-downgrade';
-    iframe.style.border = '0';
-    iframe.style.width = '100%';
-    iframe.style.height = '100%';
-    iframe.src = MAP_SRC;
-    root.appendChild(iframe);
-    overlay.remove();
-  };
-
-  overlay.addEventListener('click', loadMap);
-  overlay.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      loadMap();
+    if (!items.length || !mapContainer) {
+        console.warn('Service areas map components not found.');
+        return;
     }
-  });
-})();
+
+    // Function to create and inject the iframe
+    const loadMap = (src) => {
+        if (!src) return;
+        mapContainer.innerHTML = ''; // Clear container
+        const iframe = document.createElement('iframe');
+        iframe.title = 'Service Areas Map';
+        iframe.loading = 'lazy';
+        iframe.referrerPolicy = 'no-referrer-when-downgrade';
+        iframe.style.cssText = 'border:0; width:100%; height:100%;';
+        iframe.src = src;
+        mapContainer.appendChild(iframe);
+    };
+
+    // Function to create the "click to load" overlay
+    const createOverlay = () => {
+        const overlayButton = document.createElement('button');
+        overlayButton.className = 'sa-map-overlay';
+        overlayButton.type = 'button';
+        overlayButton.setAttribute('aria-label', 'Load map');
+        overlayButton.innerHTML = `
+            <div class="overlay-content">
+                <span class="pin" aria-hidden="true">📍</span>
+                <span class="overlay-title">View Our Locations on the Map</span>
+                <span class="overlay-hint">Click to load Google Maps</span>
+            </div>
+        `;
+
+        const handleOverlayClick = () => {
+            const activeItem = root.querySelector('.sa-item.active[data-map-src]');
+            if (activeItem) {
+                loadMap(activeItem.dataset.mapSrc);
+            }
+        };
+
+        overlayButton.addEventListener('click', handleOverlayClick);
+        overlayButton.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleOverlayClick();
+            }
+        });
+
+        mapContainer.appendChild(overlayButton);
+    };
+
+    // Add click listeners to each location card
+    items.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (item.classList.contains('active')) return;
+
+            items.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+            const newMapSrc = item.dataset.mapSrc;
+            const existingIframe = mapContainer.querySelector('iframe');
+
+            // If map is already loaded, update its source
+            if (existingIframe) {
+                existingIframe.src = newMapSrc;
+            }
+        });
+    });
+
+    // Initial setup
+    const firstItem = items[0];
+    if (firstItem) {
+        firstItem.classList.add('active');
+    }
+    createOverlay(); // Create the initial overlay
+}
+
+// Run the function when the DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initInteractiveServiceMap);
+} else {
+    initInteractiveServiceMap();
+}

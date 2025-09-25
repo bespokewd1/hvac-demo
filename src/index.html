@@ -582,7 +582,7 @@ eleventyNavigation:
     <header class="cs-content">
       <span class="cs-topper">Service Areas</span>
       <h2 class="cs-title" id="service-areas-title">
-        Proudly Serving Edmonton, Calgary, Red Deer & Surrounding Areas
+        Proudly Serving Edmonton, Calgary, & Red Deer
       </h2>
       <p class="cs-text">
         Fast, reliable HVAC and duct cleaning backed by certified technicians.
@@ -592,8 +592,8 @@ eleventyNavigation:
 
     <!-- Cities grid -->
     <ul class="sa-grid" role="list">
-      <li class="sa-item">
-        <a class="sa-link" href="/locations/edmonton" aria-label="Edmonton service area">
+      <li class="sa-item" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29743.74313222388!2d-113.52733947475586!3d53.546124500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0224580de4899%3A0x728a50435886d389!2sEdmonton%2C%20AB%2C%20Canada!5e0!3m2!1sen!2sus!4v1678886456789!5m2!1sen!2sus">
+        <a class="sa-link" href="#" aria-label="Edmonton service area">
           <div class="sa-body">
             <h3 class="sa-title">Edmonton</h3>
             <p class="sa-desc">Duct & furnace cleaning for homes and businesses across Edmonton.</p>
@@ -608,8 +608,8 @@ eleventyNavigation:
           </span>
         </a>
       </li>
-      <li class="sa-item">
-        <a class="sa-link" href="/locations/calgary" aria-label="Calgary service area">
+      <li class="sa-item" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160434.7979640968!2d-114.20454728359374!3d51.0272219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537170039f843fd5%3A0x266d3bb1b652b63a!2sCalgary%2C%20AB%2C%20Canada!5e0!3m2!1sen!2sus!4v1678886512345!5m2!1sen!2sus">
+        <a class="sa-link" href="#" aria-label="Calgary service area">
           <div class="sa-body">
             <h3 class="sa-title">Calgary</h3>
             <p class="sa-desc">Professional HVAC cleaning and maintenance in Calgary.</p>
@@ -624,8 +624,8 @@ eleventyNavigation:
           </span>
         </a>
       </li>
-      <li class="sa-item">
-        <a class="sa-link" href="/locations/red-deer" aria-label="Red Deer service area">
+      <li class="sa-item" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80210.36442621062!2d-113.88126131640624!3d52.2681197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537456c73295b349%3A0xb006748433c2a68a!2sRed%20Deer%2C%20AB%2C%20Canada!5e0!3m2!1sen!2sus!4v1678886543210!5m2!1sen!2sus">
+        <a class="sa-link" href="#" aria-label="Red Deer service area">
           <div class="sa-body">
             <h3 class="sa-title">Red Deer</h3>
             <p class="sa-desc">Trusted indoor air quality & dryer vent cleaning in Red Deer.</p>
@@ -640,43 +640,11 @@ eleventyNavigation:
           </span>
         </a>
       </li>
-      <li class="sa-item">
-        <a class="sa-link" href="/locations" aria-label="Surrounding areas service coverage">
-          <div class="sa-body">
-            <h3 class="sa-title">Surrounding Areas</h3>
-            <p class="sa-desc">We also serve nearby communities—contact us to confirm coverage.</p>
-          </div>
-          <span class="sa-cta" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-              viewBox="0 0 24 24">
-              <path fill="none" stroke="currentColor" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2"
-                d="M5 12h14m-7-7l7 7l-7 7" />
-              </svg>
-          </span>
-        </a>
-      </li>
     </ul>
 
-    <!-- Map (click to load) -->
-    <div class="sa-map" data-map>
-      <button class="sa-map-overlay" type="button" aria-label="Load map">
-        <div class="overlay-content">
-          <span class="pin" aria-hidden="true">📍</span>
-          <span class="overlay-title">View Our Locations on the Map</span>
-          <span class="overlay-hint">Click to load Google Maps</span>
-        </div>
-      </button>
-      <!-- The iframe will be injected here on click -->
-      <noscript>
-        <iframe
-          title="Service Areas Map"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          style="border:0;width:100%;height:100%;"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94853.326...">
-        </iframe>
-      </noscript>
+    <!-- Map (dynamically populated by JavaScript) -->
+    <div class="sa-map">
+        <!-- Initially empty. JS will add an overlay button, then the iframe. -->
     </div>
 
     <a class="cs-button-solid sa-cta-all" href="/locations">
