@@ -7,10 +7,10 @@
         <!-- Logo Group -->
         <div class="cs-logo-group">
             <a aria-label="go back to home" class="cs-logo" href="/">
-                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/kms-logo-2.svg" alt="logo" height="98">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="{{client.logo_url}}" alt="logo" height="98">
             </a>
             <p class="cs-text">
-                Edmonton's Expert Plumbing & Gasfitting Service. Trusted Since 2012. 
+                Edmonton's Expert Plumbing & Gasfitting Service. Trusted Since 2012.
             </p>
             <div class="cs-social">
                 <a class="cs-social-link" aria-label="visit facebook profile" href="{{ client.social.facebook }}">
@@ -51,6 +51,26 @@
                     </a>
                 </li>
             </ul>
+        </div>
+
+        <div class="badges-wrapper">
+          <div class="badge-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/badges/10-yrs-exp.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/badges/10-yrs-exp.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/badges/10-yrs-exp.webp" alt="10 years experienced"
+                         height="79">
+                </picture>
+          </div>
+          <div class="badge-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/badges/satisfaction.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/badges/satisfaction.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/badges/satisfaction.webp" alt="satisfaction guaranteed"
+                         height="79">
+                </picture>
+          </div>
+
         </div>
         </div>
 
@@ -105,6 +125,7 @@
             </div>
 
         </div>
+
     </div>
     <div class="cs-bottom">
         <span class="cs-credit">
@@ -116,4 +137,4 @@
         </div>
     </div>
 </footer>
-                                
+

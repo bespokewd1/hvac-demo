@@ -1247,6 +1247,17 @@
     flex-wrap: wrap;
     gap: 2em;
   }
+  #cs-footer-840 .badges-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+  }
+  #cs-footer-840 .badges-wrapper .badge-item img {
+    max-width: 50px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+  }
   #cs-footer-840 .cs-social-link {
     width: 2rem;
     height: 2rem;

@@ -1,8 +1,8 @@
 {
-    "name": "KMS Plumbing & Gasfitting",
-    "email": "info@kmsplumbingyeg.com",
-    "phoneForTel": "+15873404059",
-    "phoneFormatted": "(587) 340-4059",
+    "name": "HVAC AC & Duct Cleaning",
+    "email": "info@hvac.com",
+    "phoneForTel": "+11236549870",
+    "phoneFormatted": "(123) 654-9870",
     "address": {
         "lineOne": "Edmonton, Alberta CA",
         "lineTwo": "",
@@ -13,9 +13,9 @@
         "mapEmbed": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57654.15207658058!2d-113.53793907527638!3d53.54030513153948!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0224580deff23%3A0x411fa00c4af6155d!2sEdmonton%2C%20AB%2C%20Canada!5e1!3m2!1sen!2sph!4v1740366546323!5m2!1sen!2sph"
     },
     "social": {
-        "facebook": "https://www.facebook.com/KMsSPlumbingyeg/",
+        "facebook": "https://www.facebook.com/HVAC/",
         "twitter": "https://twitter.com/",
-        "instagram": "https://www.instagram.com/kmsplumbingandgasfitting/",
+        "instagram": "https://www.instagram.com/hvac/",
         "youtube": "https://www.youtube.com/"
     },
     "domain": "https://kms-draft.netlify.app",
