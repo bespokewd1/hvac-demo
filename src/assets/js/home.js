@@ -109,3 +109,40 @@ if (document.readyState === "loading") {
 } else {
   initBeforeAfterGallery();
 }
+
+
+// Lazy load Google Map on user interaction (performance/privacy friendly)
+(function initServiceAreasMap() {
+  const root = document.querySelector('#service-areas .sa-map');
+  if (!root) return;
+
+  const overlay = root.querySelector('.sa-map-overlay');
+  if (!overlay) return;
+
+  // Replace this with your actual Google Maps embed src
+  // Tip: In Google Maps, click Share > Embed a map > copy the iframe src.
+  const MAP_SRC =
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...'; // TODO: paste real embed URL
+
+  const loadMap = () => {
+    if (root.querySelector('iframe')) return;
+    const iframe = document.createElement('iframe');
+    iframe.title = 'Service Areas Map';
+    iframe.loading = 'lazy';
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.style.border = '0';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.src = MAP_SRC;
+    root.appendChild(iframe);
+    overlay.remove();
+  };
+
+  overlay.addEventListener('click', loadMap);
+  overlay.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      loadMap();
+    }
+  });
+})();

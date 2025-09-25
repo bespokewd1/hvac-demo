@@ -379,48 +379,48 @@ eleventyNavigation:
     {
       title: "Main Supply Duct",
       desc: "Heavy dust and debris removed from a main supply line.",
-      before: "/assets/images/about/technician-1.webp",
-      after: "/assets/images/about/technician-2.webp",
+      before: "/assets/images/gallery/g-1-before.webp",
+      after: "/assets/images/gallery/g-1-after.webp",
       altBefore: "Before cleaning - main supply duct",
       altAfter: "After cleaning - main supply duct"
     },
     {
       title: "Return Vent Grille",
       desc: "Return grille cleaned and sanitized for better airflow.",
-      before: "/assets/images/about/technician-2.webp",
-      after: "/assets/images/about/technician-1.webp",
+      before: "/assets/images/gallery/g-1-before.webp",
+      after: "/assets/images/gallery/g-1-after.webp",
       altBefore: "Before cleaning - return vent grille",
       altAfter: "After cleaning - return vent grille"
     },
     {
       title: "Furnace Interior",
       desc: "Combustion chamber and blower area cleared of buildup.",
-      before: "/assets/images/about/technician-1.webp",
-      after: "/assets/images/about/technician-2.webp",
+      before: "/assets/images/gallery/g-1-before.webp",
+      after: "/assets/images/gallery/g-1-after.webp",
       altBefore: "Before cleaning - furnace interior",
       altAfter: "After cleaning - furnace interior"
     },
     {
       title: "Branch Duct Run",
       desc: "Dust-lined branch fully cleaned to bare metal.",
-      before: "/assets/images/about/technician-2.webp",
-      after: "/assets/images/about/technician-1.webp",
+      before: "/assets/images/gallery/g-1-before.webp",
+      after: "/assets/images/gallery/g-1-after.webp",
       altBefore: "Before cleaning - branch duct run",
       altAfter: "After cleaning - branch duct run"
     },
     {
       title: "Dryer Vent",
       desc: "Lint-packed dryer vent restored for safety and performance.",
-      before: "/assets/images/about/technician-1.webp",
-      after: "/assets/images/about/technician-2.webp",
+      before: "/assets/images/gallery/g-1-before.webp",
+      after: "/assets/images/gallery/g-1-after.webp",
       altBefore: "Before cleaning - dryer vent",
       altAfter: "After cleaning - dryer vent"
     },
     {
       title: "Evaporator Coil Area",
       desc: "Coil housing cleared to improve cooling efficiency.",
-      before: "/assets/images/about/technician-2.webp",
-      after: "/assets/images/about/technician-1.webp",
+      before: "/assets/images/gallery/g-1-before.webp",
+      after: "/assets/images/gallery/g-1-after.webp",
       altBefore: "Before cleaning - evaporator coil area",
       altAfter: "After cleaning - evaporator coil area"
     }
@@ -485,6 +485,205 @@ eleventyNavigation:
   </div>
 </section>
 
+<!-- ============================================ -->
+<!--                 Blog Updates                 -->
+<!-- ============================================ -->
+{% set blog_posts = [
+  {
+    title: "How Often Should You Clean Your Air Ducts?",
+    wordCount: 1000,
+    readTime: "4–6 min read",
+    excerpt: "Wondering when to schedule air duct cleaning in Edmonton? Learn the ideal frequency, the health benefits for allergy and asthma relief, and how clean ducts can improve HVAC efficiency and lower utility costs for homes and businesses in Edmonton & surrounding areas.",
+    href: "#",
+    image: "/assets/images/blog2.jpg",
+    imageAlt: "Technician cleaning residential air ducts in Edmonton",
+    tags: ["Air Quality", "HVAC Efficiency", "Edmonton"]
+  },
+  {
+    title: "5 Signs Your Furnace Needs Attention",
+    wordCount: 800,
+    readTime: "3–5 min read",
+    excerpt: "From strange noises to uneven heating, these 5 warning signs can signal it’s time for a furnace tune-up or repair. Keep your Edmonton home comfortable, safe, and energy-efficient—plus see when to call a certified pro.",
+    href: "#",
+    image: "/assets/images/blog3.jpg",
+    imageAlt: "Furnace inspection showing blower compartment",
+    tags: ["Furnace", "Maintenance", "Safety"]
+  },
+  {
+    title: "The Hidden Danger of Dirty Dryer Vents",
+    wordCount: 950,
+    readTime: "4–6 min read",
+    excerpt: "Clogged dryer vents are a leading cause of preventable home fires. Learn how regular cleaning improves safety, reduces drying times, and lowers energy use—especially important for Edmonton’s colder months.",
+    href: "#",
+    image: "/assets/images/blog4.jpg",
+    imageAlt: "Dryer vent lint buildup being cleaned",
+    tags: ["Dryer Vents", "Fire Safety", "Energy Savings"]
+  }
+] %}
+
+<section id="blog-1701">
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)"
+            srcset="/assets/images/blog-hero.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)"
+            srcset="/assets/images/blog-hero.jpg">
+        <img loading="lazy" decoding="async"
+            src="/assets/images/blog-hero.jpg"
+            alt="blog hero" width="522" height="609" aria-hidden="true">
+    </picture>
+    <div class="cs-container">
+        <div class="cs-news">
+            <div class="cs-content">
+                <span class="cs-topper">Latest Insights</span>
+                <h2 class="cs-title">Fresh HVAC & Indoor Air Tips for Edmonton Homes</h2>
+            </div>
+            <div class="cs-card-group">
+              {% for post in blog_posts %}
+                <div class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="{{ post.image }}">
+                        <source media="(min-width: 601px)"
+                            srcset="{{ post.image }}">
+                        <img loading="lazy" decoding="async"
+                            src="{{ post.image }}"
+                            alt="{{ post.imageAlt }}" width="630" height="601" aria-hidden="true">
+                    </picture>
+                    <div class="cs-item-text">
+                        <h3 class="cs-h3">{{ post.title }}</h3>
+                        <div class="chip-row" aria-label="article tags">
+                          {% for tag in post.tags %}
+                          <span class="chip">{{ tag }}</span>
+                          {% endfor %}
+                        </div>
+                        <p class="cs-desc">{{ post.excerpt }}</p>
+                        <a href="{{ post.href }}" class="cs-link">
+                            <span class="cs-link-text">Read Article</span>
+                            <img class="cs-arrow" loading="lazy" decoding="async"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
+                                alt="icon" width="20" height="20" aria-hidden="true" />
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="/blog/" class="cs-button-solid">View All Articles</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Service Areas                 -->
+<!-- ============================================ -->
+<section id="service-areas" aria-labelledby="service-areas-title">
+  <div class="cs-container">
+    <header class="cs-content">
+      <span class="cs-topper">Service Areas</span>
+      <h2 class="cs-title" id="service-areas-title">
+        Proudly Serving Edmonton, Calgary, Red Deer & Surrounding Areas
+      </h2>
+      <p class="cs-text">
+        Fast, reliable HVAC and duct cleaning backed by certified technicians.
+        Explore our location coverage and book service near you.
+      </p>
+    </header>
+
+    <!-- Cities grid -->
+    <ul class="sa-grid" role="list">
+      <li class="sa-item">
+        <a class="sa-link" href="/locations/edmonton" aria-label="Edmonton service area">
+          <div class="sa-body">
+            <h3 class="sa-title">Edmonton</h3>
+            <p class="sa-desc">Duct & furnace cleaning for homes and businesses across Edmonton.</p>
+          </div>
+          <span class="sa-cta" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+              viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2"
+                d="M5 12h14m-7-7l7 7l-7 7" />
+            </svg>
+          </span>
+        </a>
+      </li>
+      <li class="sa-item">
+        <a class="sa-link" href="/locations/calgary" aria-label="Calgary service area">
+          <div class="sa-body">
+            <h3 class="sa-title">Calgary</h3>
+            <p class="sa-desc">Professional HVAC cleaning and maintenance in Calgary.</p>
+          </div>
+          <span class="sa-cta" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+              viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2"
+                d="M5 12h14m-7-7l7 7l-7 7" />
+            </svg>
+          </span>
+        </a>
+      </li>
+      <li class="sa-item">
+        <a class="sa-link" href="/locations/red-deer" aria-label="Red Deer service area">
+          <div class="sa-body">
+            <h3 class="sa-title">Red Deer</h3>
+            <p class="sa-desc">Trusted indoor air quality & dryer vent cleaning in Red Deer.</p>
+          </div>
+          <span class="sa-cta" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+              viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2"
+                d="M5 12h14m-7-7l7 7l-7 7" />
+            </svg>
+          </span>
+        </a>
+      </li>
+      <li class="sa-item">
+        <a class="sa-link" href="/locations" aria-label="Surrounding areas service coverage">
+          <div class="sa-body">
+            <h3 class="sa-title">Surrounding Areas</h3>
+            <p class="sa-desc">We also serve nearby communities—contact us to confirm coverage.</p>
+          </div>
+          <span class="sa-cta" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+              viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2"
+                d="M5 12h14m-7-7l7 7l-7 7" />
+              </svg>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Map (click to load) -->
+    <div class="sa-map" data-map>
+      <button class="sa-map-overlay" type="button" aria-label="Load map">
+        <div class="overlay-content">
+          <span class="pin" aria-hidden="true">📍</span>
+          <span class="overlay-title">View Our Locations on the Map</span>
+          <span class="overlay-hint">Click to load Google Maps</span>
+        </div>
+      </button>
+      <!-- The iframe will be injected here on click -->
+      <noscript>
+        <iframe
+          title="Service Areas Map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          style="border:0;width:100%;height:100%;"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94853.326...">
+        </iframe>
+      </noscript>
+    </div>
+
+    <a class="cs-button-solid sa-cta-all" href="/locations">
+      See All Service Areas
+    </a>
+  </div>
+</section>
 
 
   <!-- ============================================ -->
@@ -634,111 +833,7 @@ eleventyNavigation:
 <!--                    Blog                      -->
 <!-- ============================================ -->
 
-<section id="blog-1701">
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)"
-            srcset="/assets/images/blog4.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)"
-            srcset="/assets/images/blog4.jpg">
-        <img loading="lazy" decoding="async"
-            src="/assets/images/blog4.jpg"
-            alt="KMS Service Van" width="522" height="609" aria-hidden="true">
-    </picture>
-    <div class="cs-container">
-        <div class="cs-news">
-            <div class="cs-content">
-                <span class="cs-topper">Our Blog</span>
-                <h2 class="cs-title">Latest News</h2>
-            </div>
-            <div class="cs-card-group">
-                <div class="cs-item">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)"
-                            srcset="/assets/images/blog1.png">
-                        <source media="(min-width: 601px)"
-                            srcset="/assets/images/blog1.png">
-                        <img loading="lazy" decoding="async"
-                            src="/assets/images/blog1.png"
-                            alt="Computer with new website" width="630" height="601" aria-hidden="true">
-                    </picture>
-                    <div class="cs-item-text">
-                        <h3 class="cs-h3">KMS Plumbing & Gasfitting Unveils Its Updated Website!
-                        </h3>
-                        <p class="cs-desc">
-                            We are excited to announce the launch of our newly updated website! Designed to better
-                            showcase our brand and services, our website now offers an improved user experience and
-                            highlights everything we do to serve our customers.
-                        </p>
-                        <a href="/blog/kms-plumbing-and-gasfitting-unveils-its-updated-website!/" class="cs-link">
-                            <span class="cs-link-text">Read Article</span>
-                            <img class="cs-arrow" loading="lazy" decoding="async"
-                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-                                alt="icon" width="20" height="20" aria-hidden="true" />
-                        </a>
-                    </div>
-                </div>
-                <div class="cs-item">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)"
-                            srcset="/assets/images/blog2.jpg">
-                        <source media="(min-width: 601px)"
-                            srcset="/assets/images/blog2.jpg">
-                        <img loading="lazy" decoding="async"
-                            src="/assets/images/blog2.jpg"
-                            alt="volunteers" width="630" height="601" aria-hidden="true">
-                    </picture>
-                    <div class="cs-item-text">
-                        <h3 class="cs-h3">
-                            5 Things to Know Before Hiring a Plumber?
-                        </h3>
-                        <p class="cs-desc">
-                            Hiring a plumber can feel overwhelming if you don’t know what to look for. In this blog,
-                            we’ll share 5 essential things to consider before choosing a plumber, including
-                            certifications, experience, pricing transparency, and more. Make an informed decision and
-                            ensure your plumbing needs are in the hands of a trusted professional!
-                        </p>
-                        <a href="/blog/5-things-to-know-before-hiring-a-plumber/" class="cs-link">
-                            <span class="cs-link-text">Read Article</span>
-                            <img class="cs-arrow" loading="lazy" decoding="async"
-                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-                                alt="Plumber doing repair" width="20" height="20" aria-hidden="true">
-                        </a>
-                    </div>
-                </div>
-                <div class="cs-item">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)"
-                            srcset="/assets/images/blog3.jpg">
-                        <source media="(min-width: 601px)"
-                            srcset="/assets/images/blog3.jpg">
-                        <img loading="lazy" decoding="async"
-                            src="/assets/images/blog3.jpg"
-                            alt="volunteers" width="630" height="601" aria-hidden="true">
-                    </picture>
-                    <div class="cs-item-text">
-                        <h3 class="cs-h3">5 Most Common Plumbing Issues
-                        </h3>
-                        <p class="cs-desc">
-                            Plumbing problems can disrupt your daily routine and cause unnecessary stress. In this blog,
-                            we’ll explore the 5 most common plumbing issues homeowners face, how to identify them early,
-                            and tips to prevent costly repairs. From leaky faucets to clogged drains, we’ve got you
-                            covered!
-                        </p>
-                        <a href="/blog/5-most-common-plumbing-issues-and-how-to-fix-them/" class="cs-link">
-                            <span class="cs-link-text">Read Article</span>
-                            <img class="cs-arrow" loading="lazy" decoding="async"
-                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-arrow-right.svg"
-                                alt="icon" width="20" height="20" aria-hidden="true">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <a href="/blog/" class="cs-button-solid">Check our Blog Articles</a>
-        </div>
-    </div>
-</section>
+
 
 {% include "components/cta.html" %}
 

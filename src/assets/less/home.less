@@ -478,6 +478,9 @@
       transition: clip-path 80ms linear;
       will-change: clip-path;
     }
+    .ba-before {
+      filter: brightness(0.8);
+    }
 
     .ba-divider {
       position: absolute;
@@ -580,6 +583,240 @@
     .ba-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.5rem;
+    }
+  }
+}
+
+/*-- -------------------------- -->
+<---        Blog Updates        -->
+<--- -------------------------- -*/
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  // LESS cannot calculate fade() on CSS variables. Use a hex fallback and/or a runtime-safe approach.
+  // Define a LESS fallback color here (kept close for clarity):
+  @primaryHexFallback: #991b1b; // matches --primary
+
+  .chip {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.4rem 0.55rem;
+    border-radius: 999px;
+    color: var(--primary);
+    // Fallback for browsers without CSS variables or to ensure LESS compiles:
+    background: rgba(@primaryHexFallback, 0.12);
+    border: 1px solid rgba(@primaryHexFallback, 0.25);
+    // Optional: if you want to prefer CSS variables at runtime, you can layer a var() declaration after:
+    // background: color-mix(in srgb, var(--primary) 12%, transparent);
+    // border-color: color-mix(in srgb, var(--primary) 25%, transparent);
+  }
+
+  // .chip {
+  //   color: var(--primary);
+  //   background: currentColor;
+  //   opacity: 0.12;
+  //   border: 1px solid currentColor;
+  // }
+}
+
+/*-- -------------------------- -->
+<---        Service Areas       -->
+<--- -------------------------- -*/
+@media only screen and (min-width: 0rem) {
+  #service-areas {
+    padding: var(--sectionPadding);
+    background: var(--surface);
+
+    .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(2rem, 4vw, 3rem);
+    }
+
+    .cs-content {
+      text-align: center;
+
+      .cs-title {
+        margin-bottom: 0.5rem;
+      }
+
+      .cs-text {
+        max-width: 46rem;
+      }
+    }
+
+    /* Cities grid */
+    .sa-grid {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .sa-item {
+      margin: 0;
+    }
+
+    .sa-link {
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--borderColor);
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: var(--shadow-xs);
+      transition:
+        box-shadow 160ms ease,
+        border-color 160ms ease,
+        transform 160ms ease;
+
+      &:hover {
+        transform: translateY(-1px);
+        border-color: #ddd;
+        box-shadow: var(--shadow-sm);
+      }
+    }
+
+    .sa-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .sa-title {
+      margin: 0;
+      font-size: 1.0625rem;
+      color: var(--headerColor);
+    }
+
+    .sa-desc {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--bodyTextColor);
+      line-height: 1.5;
+    }
+
+    .sa-cta {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      border: 1px solid var(--borderColor);
+      display: grid;
+      place-items: center;
+      color: var(--primary);
+      background: var(--surfaceAlt);
+    }
+
+    /* Map wrapper */
+    .sa-map {
+      width: 100%;
+      height: 360px;
+      border: 1px solid var(--borderColor);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      background: var(--surfaceAlt);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .sa-map-overlay {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.35)
+      );
+      color: #fff;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: background-color 160ms ease;
+      outline: none;
+
+      &:hover,
+      &:focus-visible {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        );
+        box-shadow: 0 0 0 3px var(--focusRing);
+      }
+
+      .overlay-content {
+        text-align: center;
+        display: grid;
+        gap: 0.35rem;
+        padding: 0 1rem;
+      }
+
+      .pin {
+        font-size: 1.25rem;
+      }
+
+      .overlay-title {
+        font-weight: 700;
+      }
+
+      .overlay-hint {
+        font-size: 0.9375rem;
+        opacity: 0.9;
+      }
+    }
+
+    .sa-cta-all {
+      background: var(--primary);
+
+      &:before {
+        background: #000;
+      }
+    }
+  }
+}
+
+/* Tablet and up */
+@media only screen and (min-width: 48rem) {
+  #service-areas {
+    .sa-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .sa-map {
+      height: 420px;
+    }
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 64rem) {
+  #service-areas {
+    .sa-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .sa-map {
+      height: 480px;
     }
   }
 }
