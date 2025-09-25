@@ -1,0 +1,158 @@
+{% block head %}
+<!--          Blaze Assets        -->
+<link rel="stylesheet" href="{{ client.domain }}/assets/css/blaze.css" />
+<script src="{{ client.domain }}/assets/js/blaze-slider.dev.js"></script>
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% set reviews = [
+  {
+    name: "Samantha R.",
+    city: "Edmonton, AB",
+    content: "We booked a complete furnace and duct cleaning and the difference was noticeable right away. Dust levels dropped and our furnace runs quieter. Techs were on time, careful with our home, and explained everything clearly. Highly recommend."
+  },
+  {
+    name: "Michael P.",
+    city: "St. Albert, AB",
+    content: "They cleaned our dryer vent and found a major lint buildup we didn’t know about. Dryer times are way faster now and we feel better about the safety side. Pricing was upfront and the service was professional."
+  },
+  {
+    name: "Leila N.",
+    city: "Sherwood Park, AB",
+    content: "Booked an HVAC tune-up before the season change. They checked airflow, changed the filter, and cleaned the AC coils. Our AC cools more evenly and our utility bill dipped a bit. Friendly team and quick booking."
+  },
+  {
+    name: "Gurpreet S.",
+    city: "Edmonton, AB",
+    content: "We had AC installation done last month. They sized the system properly, walked us through options, and the install was clean with no surprises on the final bill. House stays comfortable even during hot afternoons."
+  },
+  {
+    name: "Hannah T.",
+    city: "Spruce Grove, AB",
+    content: "Indoor air quality upgrade was worth it. They added a higher-MERV filter and a UV system—our allergies are noticeably better. The tech showed how to maintain everything and followed up after the visit."
+  }
+] %}
+
+<section id="reviews-1833" aria-labelledby="reviews-heading">
+  <div class="cs-container">
+    <header class="cs-content">
+      <span class="cs-topper">Testimonials</span>
+      <h2 class="cs-title" id="reviews-heading">Our Client Testimonials</h2>
+    </header>
+
+    <div class="blaze-slider reviews-slider" aria-roledescription="carousel">
+      <div class="blaze-container">
+        <div class="blaze-track-container">
+          <div class="blaze-track" role="list">
+            {% for r in reviews %}
+            <article class="blaze-slide" role="listitem">
+              <div class="cs-flex-group">
+                <div class="cs-review-group">
+                  <img
+                    class="cs-stars"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
+                    alt=""
+                    width="97"
+                    height="80"
+                    aria-hidden="true"
+                  />
+                  <blockquote class="cs-review-text">
+                    <p>“{{ r.content }}”</p>
+                  </blockquote>
+                  <footer class="cs-review-meta">
+                    <div class="cs-reviewer" style="margin-bottom: 0.5rem">
+                      <strong class="cs-name">{{ r.name }}</strong>
+                      <small
+                        class="cs-name"
+                        style="font-size: 85%; font-weight: medium"
+                        >{{ r.city }}</small
+                      >
+                    </div>
+                    <img
+                      class="cs-source"
+                      src="{{ client.domain }}/assets/images/google-review-icon.webp"
+                      alt="Reviewed on Google"
+                      height="50"
+                      loading="lazy"
+                      decoding="async"
+                      style="margin-bottom: 0.5rem"
+                    />
+                  </footer>
+                  <img
+                    class="cs-quote"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
+                    alt=""
+                    width="97"
+                    height="80"
+                    aria-hidden="true"
+                  />
+                </div>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+
+        <nav class="blaze-nav" aria-label="Reviews carousel controls">
+          <div class="blaze-pagination"></div>
+        </nav>
+      </div>
+    </div>
+
+    <p>
+      <a
+        href="{{ client.google_review }}"
+        class="cs-button-solid"
+        target="_blank"
+        rel="noopener"
+        >See More Reviews</a
+      >
+    </p>
+  </div>
+
+  <picture class="cs-background" aria-hidden="true">
+    <source
+      media="(max-width: 1023px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png
+      "
+    />
+    <source
+      media="(min-width: 1024px)"
+      srcset="
+        https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png
+      "
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png"
+      alt=""
+      width="1920"
+      height="600"
+    />
+  </picture>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.querySelector("#reviews-1833 .reviews-slider");
+    if (!el) return;
+    if (el.dataset.initialized === "true") return;
+    new BlazeSlider(el, {
+      all: {
+        slidesToShow: 1,
+        slideGap: "16px",
+        transitionDuration: 450,
+        enableAutoplay: true,
+        autoplayInterval: 4500,
+        stopOnMouseEnter: true,
+      },
+    });
+    el.dataset.initialized = "true";
+  });
+</script>

@@ -338,6 +338,167 @@
   }
 }
 /*-- -------------------------- -->
+<---     Before/After Gallery    -->
+<--- -------------------------- -*/
+@media only screen and (min-width: 0rem) {
+  #bsp-gallery {
+    padding: var(--sectionPadding);
+    background: var(--surfaceAlt);
+  }
+  #bsp-gallery .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #bsp-gallery .gallery-header {
+    align-items: center;
+    text-align: center;
+  }
+  #bsp-gallery .gallery-header .cs-title {
+    margin-bottom: 0.5rem;
+  }
+  #bsp-gallery .gallery-header .cs-text {
+    max-width: 42rem;
+  }
+  #bsp-gallery .ba-grid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  #bsp-gallery .ba-card {
+    background: var(--surface);
+    border: 1px solid var(--borderColor);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-xs);
+    transition: box-shadow 180ms ease, transform 180ms ease;
+  }
+  #bsp-gallery .ba-card:hover {
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+  }
+  #bsp-gallery .ba-frame {
+    position: relative;
+    width: 100%;
+    /* 16:10 aspect ratio */
+    aspect-ratio: 16 / 10;
+    background: #f1f1f1;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  #bsp-gallery .ba-picture {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  #bsp-gallery .ba-picture img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #bsp-gallery .ba-after {
+    clip-path: inset(0 50% 0 0);
+    transition: clip-path 80ms linear;
+    will-change: clip-path;
+  }
+  #bsp-gallery .ba-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    transition: left 80ms linear;
+  }
+  #bsp-gallery .ba-range {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    background: transparent;
+    cursor: col-resize;
+    outline: none;
+    z-index: 5;
+  }
+  #bsp-gallery .ba-range::-webkit-slider-runnable-track {
+    background: transparent;
+  }
+  #bsp-gallery .ba-range::-moz-range-track {
+    background: transparent;
+  }
+  #bsp-gallery .ba-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: var(--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  #bsp-gallery .ba-range::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  #bsp-gallery .ba-meta {
+    padding: 0.9rem 1rem 1.1rem;
+  }
+  #bsp-gallery .ba-meta .ba-title {
+    margin: 0 0 0.35rem;
+    color: var(--headerColor);
+    font-size: 1.0625rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  #bsp-gallery .ba-meta .ba-desc {
+    margin: 0;
+    color: var(--bodyTextColor);
+    font-size: 0.975rem;
+    line-height: 1.5;
+  }
+  #bsp-gallery .gallery-cta-wrap {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #bsp-gallery .cs-container {
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+  #bsp-gallery .ba-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  #bsp-gallery .gallery-cta-wrap {
+    justify-content: flex-end;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #bsp-gallery .ba-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+/*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/
 /* Mobile - 360px */

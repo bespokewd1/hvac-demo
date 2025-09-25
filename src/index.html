@@ -15,10 +15,11 @@ eleventyNavigation:
 
 <link rel="stylesheet" href="/assets/css/home.css">
 
+<script src="assets/js/home.js"></script>
+
 <!--          Blaze Assets        -->
 <link rel="stylesheet" href="assets/css/blaze.css">
 <script src="assets/js/blaze-slider.dev.js"></script>
-<script src="assets/js/home.js"></script>
 
 <!--          Acuity Assets        -->
 <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/25366455.css" id="acuity-button-styles" /><script src="https://embed.acuityscheduling.com/embed/button/25366455.js" async></script>
@@ -246,7 +247,7 @@ eleventyNavigation:
       }
     ] %}
 
-    <!-- Desktop/Tablet Grid (visible ≥768px) -->
+    {# Desktop/Tablet Grid (visible ≥768px) #}
     <ul class="card-grid" role="list">
       {% for s in duct_services %}
       <li class="card">
@@ -266,7 +267,7 @@ eleventyNavigation:
           <a class="cs-button-outline" href="{{ s.url }}">
             Learn More
             <span class="button-outline-icon">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7l5 5l-5 5m6-10l5 5l-5 5"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7l5 5l-5 5m6-10l5 5l-5 5"/></svg>
             </span>
           </a>
         </div>
@@ -274,7 +275,7 @@ eleventyNavigation:
       {% endfor %}
     </ul>
 
-    <!-- Mobile Carousel (visible ≤767px) -->
+    {# Mobile Carousel (visible ≤767px) #}
     <div class="blaze-slider cards-slider" aria-hidden="true">
       <div class="blaze-container">
         <div class="blaze-track-container">
@@ -303,7 +304,7 @@ eleventyNavigation:
           </div>
         </div>
 
-        <!-- Nav: dots + arrows (only shown on mobile via CSS) -->
+        {# Nav: dots + arrows (only shown on mobile via CSS) #}
         <div class="blaze-nav">
           <button class="blaze-prev" aria-label="Previous service"></button>
           <div class="blaze-pagination"></div>
@@ -317,6 +318,7 @@ eleventyNavigation:
     </a>
   </div>
 </section>
+
 
 
 <!-- ============================================ -->
@@ -363,6 +365,126 @@ eleventyNavigation:
         </div>
     </div>
 </section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+{% include "components/reviews.html" %}
+
+<!-- ============================================ -->
+<!--                Before & After Gallery        -->
+<!-- ============================================ -->
+
+  {% set duct_examples = [
+    {
+      title: "Main Supply Duct",
+      desc: "Heavy dust and debris removed from a main supply line.",
+      before: "/assets/images/about/technician-1.webp",
+      after: "/assets/images/about/technician-2.webp",
+      altBefore: "Before cleaning - main supply duct",
+      altAfter: "After cleaning - main supply duct"
+    },
+    {
+      title: "Return Vent Grille",
+      desc: "Return grille cleaned and sanitized for better airflow.",
+      before: "/assets/images/about/technician-2.webp",
+      after: "/assets/images/about/technician-1.webp",
+      altBefore: "Before cleaning - return vent grille",
+      altAfter: "After cleaning - return vent grille"
+    },
+    {
+      title: "Furnace Interior",
+      desc: "Combustion chamber and blower area cleared of buildup.",
+      before: "/assets/images/about/technician-1.webp",
+      after: "/assets/images/about/technician-2.webp",
+      altBefore: "Before cleaning - furnace interior",
+      altAfter: "After cleaning - furnace interior"
+    },
+    {
+      title: "Branch Duct Run",
+      desc: "Dust-lined branch fully cleaned to bare metal.",
+      before: "/assets/images/about/technician-2.webp",
+      after: "/assets/images/about/technician-1.webp",
+      altBefore: "Before cleaning - branch duct run",
+      altAfter: "After cleaning - branch duct run"
+    },
+    {
+      title: "Dryer Vent",
+      desc: "Lint-packed dryer vent restored for safety and performance.",
+      before: "/assets/images/about/technician-1.webp",
+      after: "/assets/images/about/technician-2.webp",
+      altBefore: "Before cleaning - dryer vent",
+      altAfter: "After cleaning - dryer vent"
+    },
+    {
+      title: "Evaporator Coil Area",
+      desc: "Coil housing cleared to improve cooling efficiency.",
+      before: "/assets/images/about/technician-2.webp",
+      after: "/assets/images/about/technician-1.webp",
+      altBefore: "Before cleaning - evaporator coil area",
+      altAfter: "After cleaning - evaporator coil area"
+    }
+  ] %}
+
+<section id="bsp-gallery" aria-labelledby="bsp-gallery-title">
+  <div class="cs-container">
+    <header class="cs-content gallery-header">
+      <span class="cs-topper">Before & After</span>
+      <h2 class="cs-title" id="bsp-gallery-title">See the Difference</h2>
+      <p class="cs-text">
+        Real results from our duct, furnace, and vent cleaning. Drag the handle
+        to compare before and after.
+      </p>
+    </header>
+
+    <ul class="ba-grid" role="list">
+      {% for ex in duct_examples %}
+      <li class="ba-card">
+        <div class="ba-frame">
+          <picture class="ba-picture ba-before">
+            <img
+              src="{{ ex.before }}"
+              alt="{{ ex.altBefore }}"
+              width="640"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <picture class="ba-picture ba-after">
+            <img
+              src="{{ ex.after }}"
+              alt="{{ ex.altAfter }}"
+              width="640"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <div class="ba-divider" aria-hidden="true"></div>
+          <input
+            class="ba-range"
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            aria-label="Reveal after image"
+          />
+        </div>
+        <div class="ba-meta">
+          <h3 class="ba-title">{{ ex.title }}</h3>
+          <p class="ba-desc">{{ ex.desc }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="gallery-cta-wrap">
+      <a href="/gallery/" class="cs-button-solid">See More Projects</a>
+    </div>
+  </div>
+</section>
+
 
 
   <!-- ============================================ -->
@@ -487,115 +609,6 @@ eleventyNavigation:
     </div>
 </section>
 
-<!-- ============================================ -->
-<!--                  Reviews                     -->
-<!-- ============================================ -->
-
-<section id="reviews-1833">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Testimonials</span>
-            <h2 class="cs-title">Our Client Testimonials</h2>
-        </div>
-        <div class="blaze-slider">
-            <div class="blaze-container">
-                <div class="blaze-track-container">
-                    <div class="blaze-track">
-                        <div class="blaze-slide">
-                            <div class="cs-flex-group">
-                                <div class="cs-review-group">
-                                    <!--Stars-->
-                                    <img class="cs-stars" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                    <p class="cs-review-text">
-                                        ”We worked with Jack at KMS when we had our basement contracted. He did all the
-                                        plumbing for our basement bathroom. He provides high quality work and very
-                                        pleasant to work with. When we had an issue, he came out same day and kept in
-                                        contact with me to ensure it got completed. He even followed up to ensure all
-                                        was working well. I would hire again.”
-                                    </p>
-                                    <span class="cs-name">Miles McMillan</span>
-                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
-                                    <!--Quote-->
-                                    <img class="cs-quote" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blaze-slide">
-                            <div class="cs-flex-group">
-                                <div class="cs-review-group">
-                                    <!--Stars-->
-                                    <img class="cs-stars" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                    <p class="cs-review-text">
-                                        ”Jack installed a new faucet and some upgraded sink components for us; the
-                                        service and workmanship were fantastic. He was very thorough in assessing our
-                                        needs/expectations prior to the job; the customer service was excellent
-                                        throughout our experience. I highly recommend KMS Plumbing.”
-                                    </p>
-                                    <span class="cs-name">Dave O.</span>
-                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
-                                    <!--Quote-->
-                                    <img class="cs-quote" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blaze-slide">
-                            <div class="cs-flex-group">
-                                <div class="cs-review-group">
-                                    <!--Stars-->
-                                    <img class="cs-stars" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                    <p class="cs-review-text">
-                                        ”I just had my hot water tank replacement completed by Jack Kumar of KMS
-                                        Plumbing & Gas fitting. Prior to this job, Jack had replaced a toilet for us and
-                                        completed a hot water tank replacement for a senior friend of ours. As usual,
-                                        Jack is on time and professional. His workmanship is great. Housekeeping is
-                                        excellent. Pricing is reasonable. Thanks for your service Jack.”
-                                    </p>
-                                    <span class="cs-name">Alex Chan</span>
-                                    <img src="{{ client.domain }}/assets/images/google-review-icon.webp" height=50 />
-                                    <!--Quote-->
-                                    <img class="cs-quote" loading="lazy" decoding="async"
-                                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg"
-                                        alt="quotes" width="97" height="80" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="blaze-nav">
-                    <div class="blaze-pagination"></div>
-                </div>
-            </div>
-        </div>
-        <!--Slider Initialization Script-->
-        <script>
-            const el = document.querySelector('.blaze-slider')
-            new BlazeSlider(el)
-        </script>
-        <a href="{{ client.google_review }}" class="cs-button-solid" target="_blank">See More Reviews</a>
-    </div>
-    <!--Texture Graphic-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 1023px)"
-            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.png">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 1024px)"
-            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png">
-        <img loading="lazy" decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dotted-texture.png" alt="dotted texture"
-            width="1920" height="600">
-    </picture>
-</section>
 
 <!-- ============================================ -->
 <!--              Secondary Banner                -->

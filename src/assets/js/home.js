@@ -48,3 +48,64 @@
   }
 
   serviceBlazeSlider();
+
+
+// Before/After slider init
+function initBeforeAfterGallery() {
+  const root = document.querySelector("#bsp-gallery");
+  if (!root) return;
+
+  const cards = root.querySelectorAll(".ba-card");
+  const prefersReduced =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  cards.forEach((card) => {
+    const range = card.querySelector(".ba-range");
+    const after = card.querySelector(".ba-after");
+    const divider = card.querySelector(".ba-divider");
+    if (!range || !after || !divider) return;
+
+    const setPosition = (value) => {
+      const pct = Math.max(0, Math.min(100, Number(value)));
+      const rightInset = 100 - pct;
+      after.style.clipPath = `inset(0 ${rightInset}% 0 0)`;
+      divider.style.left = `${pct}%`;
+    };
+
+    // Initial position
+    setPosition(range.value || 50);
+
+    // Input handling
+    range.addEventListener("input", (e) => {
+      setPosition(e.target.value);
+    });
+
+    // Keyboard fine control
+    range.addEventListener("keydown", (e) => {
+      const step = e.shiftKey ? 10 : 1;
+      if (e.key === "ArrowLeft" || e.key === "ArrowDown") {
+        e.preventDefault();
+        range.value = Math.max(0, range.value - step);
+        range.dispatchEvent(new Event("input", { bubbles: true }));
+      } else if (e.key === "ArrowRight" || e.key === "ArrowUp") {
+        e.preventDefault();
+        range.value = Math.min(100, Number(range.value) + step);
+        range.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+    });
+
+    // Reduce animation jitter if user prefers reduced motion
+    if (prefersReduced) {
+      after.style.transition = "none";
+      divider.style.transition = "none";
+    }
+  });
+}
+
+// Defer until DOM ready
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initBeforeAfterGallery);
+} else {
+  initBeforeAfterGallery();
+}
